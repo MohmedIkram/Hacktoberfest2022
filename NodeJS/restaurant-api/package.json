@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "errorhandler": "1.5.1",
+    "express": "4.17.1",
+    "joi": "^13.1.0",
+    "morgan": "1.10.0"
+  }
+}
