@@ -7,10 +7,10 @@ bot = commands.Bot(command_prefix='!')
 
 def get_quote(name):
     #name = "GlaeDragon"
-    response = requests.get("https://tr1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{0}?api_key=RGAPI-e2789c89-1529-461d-9d09-f95364db2d49".format(name))
+    response = requests.get("https://tr1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{0}?api_key=RiotApiKey".format(name))
     json_data = json.loads(response.text)
     userId = json_data["id"]
-    response2 = requests.get("https://tr1.api.riotgames.com/tft/league/v1/entries/by-summoner/{0}?api_key=RGAPI-e2789c89-1529-461d-9d09-f95364db2d49".format(userId))
+    response2 = requests.get("https://tr1.api.riotgames.com/tft/league/v1/entries/by-summoner/{0}?api_key=RiotApiKey".format(userId))
     user_league = json.loads(response2.text)
     tier = user_league[0]["tier"]
     print(tier)
