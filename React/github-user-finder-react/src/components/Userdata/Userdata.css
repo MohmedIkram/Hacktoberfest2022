@@ -1,0 +1,114 @@
+article {
+    color: white;
+    padding: 8rem 4rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template: auto / 1fr 2fr;
+    gap: 1rem;
+}
+
+.user-profile {
+    max-width: 18rem;
+}
+
+.user-header img {
+    width: 100%;
+    max-width: 15rem;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: contain;
+}
+
+.user-profile p {
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin-bottom: 0.7rem;
+    line-height: 1rem;
+}
+
+.user-name {
+    margin-top: 1rem;
+}
+
+.user-name h1 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.goback-container {
+    justify-self: center;
+}
+
+.goback-container a {
+    position: relative;
+    top: -3rem;
+    text-decoration: none;
+    color: white !important;
+    font-weight: 600;
+    box-shadow: 7px 8px 20px 0px rgba(126, 126, 126, 0.2);
+}
+
+@media screen and (max-width: 950px) {
+    article {
+        padding: 8rem 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    article {
+        padding: 5rem 1rem !important;
+        gap: 0;
+    }
+    .user-details-container {
+        overflow: auto;
+    }
+    .user-header img {
+        margin-right: 1rem !important;
+    }
+    .user-name h1 {
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    article {
+        padding: 5rem 1rem;
+    }
+    .container {
+        grid-template: auto auto / 1fr;
+    }
+    .user-profile {
+        max-width: unset;
+        width: 100%;
+    }
+    .user-details-container,
+    .user-details,
+    .button-container {
+        width: 100%;
+    }
+    .user-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .user-header img {
+        max-width: 5rem;
+        margin-right: 2rem;
+    }
+    .location {
+        display: flex;
+    }
+    .location p:nth-of-type(1) {
+        margin-right: 1rem;
+    }
+    /* .goback-container a {
+        transform: translate(-50%, -100%);
+    } */
+}
