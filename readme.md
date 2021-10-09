@@ -39,3 +39,15 @@ If you liked working on this project, please share this project as much as you c
 1. Don't Create Pull Request to update "readme.md" File.
 2. Upload or Create File in Specified Language Folder.
 3. If Specified Language Folder not Found then Create Folder and then Upload or Create File.
+
+
+
+
+#javascript
+JavaScript is the world's most popular programming language.
+
+JavaScript is the programming language of the Web.
+
+JavaScript is easy to learn.
+
+This tutorial will teach you JavaScript from basic to advanced.
