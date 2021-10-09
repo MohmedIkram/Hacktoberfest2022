@@ -1,0 +1,29 @@
+.num-minus,
+.num-add {
+  margin-top: 1px;
+  display: inline-block;
+  position: relative;
+}
+
+.num-minus:before,
+.num-add:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  width: 10px;
+  border-top: 2px solid #3A3E3D;
+  margin-top: -1px;
+}
+
+.num-add::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -5px;
+  height: 10px;
+  border-left: 2px solid #3A3E3D;
+  margin-left: -1px;
+}
