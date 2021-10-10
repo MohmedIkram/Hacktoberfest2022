@@ -1,6 +1,6 @@
 # Notes app with ReactJS
 
-I have create a notes app with ReactJS and Material UI..
+Notes app has created with ReactJS and Material UI..🚀
 
 
 ## Available Scripts
