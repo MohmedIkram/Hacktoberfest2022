@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/material": "^5.0.3",
     "particles-bg": "^2.5.5",
     "react": "^16.13.1",
     "react-alert": "^7.0.3",
