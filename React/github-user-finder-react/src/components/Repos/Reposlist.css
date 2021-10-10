@@ -1,0 +1,65 @@
+.reposlist {
+    display: grid;
+    grid-template: auto / 3fr 4rem;
+    border-bottom: 1px solid rgba(126, 126, 126, 0.3);
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.reposlist a {
+    font-size: 1rem !important;
+    text-decoration: none;
+    font-weight: 600;
+    color: #58a6ff;
+    max-width: 5rem;
+}
+
+.reposlist p {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    line-height: 0.8rem;
+}
+
+.reposlist button {
+    display: block;
+    background-color: rgba(56, 139, 253, 0.15);
+    border: none;
+    outline: none;
+    color: #58a6ff;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.75rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    margin-top: 0.7rem;
+}
+
+.repos-star p:nth-of-type(2) {
+    margin-bottom: 0;
+}
+
+.repos-name p {
+    margin-bottom: 0;
+    opacity: 0.75;
+}
+
+@media screen and (max-width: 650px) {
+    .reposlist {
+        grid-template: auto / 2.5fr 0.7fr !important;
+    }
+    .reposlist a {
+        font-size: 0.75rem !important;
+    }
+    .repos-star {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .repos-star button {
+        margin: 0;
+    }
+    .reposlist p {
+        margin-top: 0.5rem;
+        font-size: 0.6rem;
+    }
+}

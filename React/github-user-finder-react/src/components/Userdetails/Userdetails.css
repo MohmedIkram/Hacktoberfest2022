@@ -1,0 +1,41 @@
+.button-container {
+    display: flex;
+    border-bottom: 1px solid rgba(126, 126, 126, 0.5);
+}
+
+.button-container button {
+    padding: 0.75rem;
+    padding-left: 0;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0px solid whitesmoke;
+    outline: none;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.btn-icon {
+    margin-right: 0.5rem;
+}
+
+button span {
+    margin-left: 0.5rem;
+    background-color: rgba(126, 126, 126, 0.5);
+    padding: 0.1rem 0.35rem;
+    border-radius: 50%;
+}
+
+.active {
+    border-bottom: 2px solid whitesmoke !important;
+}
+
+@media screen and (max-width: 650px) {
+    .button-container {
+        overflow: scroll;
+    }
+    .button-container bottom {
+        font-size: 0.75rem;
+    }
+}

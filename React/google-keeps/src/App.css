@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0px;
+  padding:0px;
+  background: rgb(231, 228, 228);
+}
+html{
+  font-size:64.5% ;
+}
+@media (max-width:990px){
+html{
+  font-size: 55%;
+}
+}
+@media (max-width:768px){
+  html{
+    font-size: 45%;
+  }
+
+}
+
+nav{
+  background-color: hsla(60, 100%, 50%, 0.801);
+  height:5rem;
+  display: flex;
+ align-items: center;
+ font-family: 'Akaya Telivigala', cursive;
+ padding:1rem;
+ box-shadow: 0 0 3px black;
+}
+nav h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.25rem 0.25rem black;
+  /* font-family: 'Balsamiq Sans'; */
+}
+nav path{
+  /* color:purple; */
+  /* rest csss in component */
+}
+nav img{
+  position: absolute;
+ right:5rem;
+ top:2rem;
+}
+.note-box{
+ box-shadow: 0 0 5px rgb(97, 95, 95);
+  font-size: 1.5rem;
+  width:20rem;
+  background: white;
+  padding: 1rem;
+  font-family: 'Roboto Slab', serif;
+  margin:1rem;
+  overflow: auto;
+  height: 20rem;
+  width:25rem;
+  border-radius: 1rem;
+}
+.note-top{
+  display: flex;
+  justify-content: space-between;
+}
+.note-box h2{
+  margin-top:0px;
+}
+.note-box:hover{
+  transform: scale(1.08);
+}
+.note-container{
+ display: flex;
+ padding:1rem;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+}
+
+.note-box button:hover{
+  color: red;
+}
+.input-container{
+  display: flex;
+  justify-content: center;
+}
+.input-bar{
+  width:40rem;
+  /* border: 1px solid black; */
+  padding:1rem;
+  background: white;
+  margin-top:1rem;
+  box-shadow: 0 0 1rem rgb(97, 97, 97);
+  border-radius: 1rem;
+}
+.input-bar input{
+  position: relative;
+  width:90%;
+  border:0px;
+  outline: none;
+}
+.input-bar button{
+  position:relative;
+ left:32rem;
+ font-size: 10rem;
+}
+.input-bar .title{
+  font-size: 2rem;
+  font-style: bold;
+}
