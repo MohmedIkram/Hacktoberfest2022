@@ -1,0 +1,35 @@
+main {
+    min-height: 100vh;
+    background-color: var(--color-background);
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    background-image: url('../../assets/background-stars.svg');
+    width: 200%;
+    height: 1000rem;
+    background-position-y: 1000rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-repeat: repeat;
+    animation: animate 120s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 1000rem;
+    }
+    100% {
+        background-position-y: 0;
+    }
+}

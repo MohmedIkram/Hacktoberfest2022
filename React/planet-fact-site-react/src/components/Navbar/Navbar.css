@@ -1,0 +1,188 @@
+nav {
+    display: flex;
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(178, 190, 181, 0.25);
+    width: 100%;
+    position: relative;
+    background-color: var(--color-background);
+    z-index: 2;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-family-antonio);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu img {
+    pointer-events: none;
+}
+
+.planets-nav ul {
+    list-style-type: none;
+    position: relative;
+    top: 0.7rem;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+li:nth-of-type(1) {
+    margin-left: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-family: var(--font-family);
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.nav-link {
+    position: relative;
+    transition: all .3s;
+}
+
+.earth-hover:hover,
+.earth {
+    color: var(--color-earth-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.mercury,
+.mercury-hover:hover {
+    color: var(--color-mercury-main);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.venus,
+.venus-hover:hover {
+    color: var(--color-venus-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.mars,
+.mars-hover:hover {
+    color: var(--color-mars-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.jupiter,
+.jupiter-hover:hover {
+    color: var(--color-jupiter-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.saturn,
+.saturn-hover:hover {
+    color: var(--color-saturn-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.uranus,
+.uranus-hover:hover {
+    color: var(--color-uranus-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.neptune,
+.neptune-hover:hover {
+    color: var(--color-neptune-menu);
+    font-weight: 700;
+    opacity: 1;
+}
+
+.show-menu {
+    transform: translateY(1rem) translateX(0) !important;
+}
+
+@media screen and (max-width: 1050px) {
+    nav {
+        padding: 2rem 2rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        padding-bottom: 2rem;
+    }
+    .logo {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+        top: 0.2rem;
+        cursor: pointer;
+    }
+    nav {
+        flex-direction: row;
+        padding: 2rem;
+    }
+    .logo {
+        margin-bottom: 0;
+    }
+    .planets-nav {
+        width: 100%;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        transform: translateY(1rem) translateX(110%);
+        min-height: 100vh;
+        background-color: var(--color-background);
+        z-index: 5;
+        transition: all .3s;
+    }
+    .planets-nav ul li {
+        display: block;
+        padding: 1.5rem 0rem 1.5rem;
+        margin: 0 2.5rem;
+        border-bottom: 2px solid rgba(178, 190, 181, 0.25);
+        position: relative;
+    }
+    li::after {
+        content: '';
+        background-image: url('../../assets/icon-chevron.svg');
+        position: absolute;
+        background-position: center;
+        background-size: cover;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        right: 0;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+    }
+    li:hover {
+        transform: scale(1.02);
+    }
+    .planets-nav ul li a {
+        font-size: 1.5rem;
+    }
+}
