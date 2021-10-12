@@ -1,0 +1,38 @@
+{
+  "name": "notes-app",
+  "version": "0.1.0",
+  "main": "./src/index.js",
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/material": "^5.0.3",
+    "particles-bg": "^2.5.5",
+    "react": "^16.13.1",
+    "react-alert": "^7.0.3",
+    "react-alert-template-mui": "^1.0.7",
+    "react-animated-popup": "^0.1.1",
+    "react-dom": "^16.13.1",
+    "react-mouse-particles": "^1.1.5",
+    "react-particles-js": "^3.4.1",
+    "react-scripts": "^3.4.1",
+    "react-toastify": "^7.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "license": "MIT",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

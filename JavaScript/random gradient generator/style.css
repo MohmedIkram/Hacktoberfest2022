@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:arial,"sans-serif";
+}
+body{
+  height:100vh;
+  display:flex;
+  align-items:center;
+}
+.container{
+  width:900px;
+  margin:100px auto;
+}
+.container .background-gradient {
+  width:100%;
+  height:400px;
+  border-radius:20px;
+  border:3px solid #eee;
+  box-shadow:2px 2px 20px rgba(0,0,0,.25);
+}
+.container .values{
+  width:min(100%,450px);
+  margin:20px auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+  border:1px solid rgba(0,0,0,.075);
+  border-radius:5px;
+  padding:20px;
+}
+.container .values > p{
+  font-weight:bold;
+}
+.container .values .infos{
+  display:flex;
+  gap:20px;
+}
+.container .values .infos .info-1 ,
+.container .values .infos .info-2{
+  display:flex;
+  align-items:center;
+  gap:5px;
+} 
+.container .values .infos .info-1 .color-1,
+.container .values .infos .info-2 .color-2 {
+  width:25px ;
+  height:25px ;
+  border-radius:50% ;
+  border:1px solid #eee;
+  box-shadow:0 0 5px rgba(0,0,0,.1);
+}
+.container .values .infos .info-1 .color-1 .pickr,
+.container .values .infos .info-2 .color-2 .pickr{
+  opacity:0;
+}

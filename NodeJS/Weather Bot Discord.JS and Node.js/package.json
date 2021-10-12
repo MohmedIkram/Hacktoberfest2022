@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "axios": "^0.22.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.3",
+    "mongoose": "^6.0.9",
+    "weather-js": "^2.0.0"
+  },
+  "name": "weather-bot",
+  "version": "1.0.0",
+  "main": "src/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

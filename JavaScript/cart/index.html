@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css">
+		<title>Price and Quantity</title>
+	</head>
+	<body>
+		<div class="price-value" id="priceExtra">Price: $77.89</div>
+
+		<span class="num-minus" onclick="minusCount()">-</span>
+		<input
+			type="text"
+			class="num-count"
+			id="num-count"
+			value="1"
+			data-max="4"
+			data-min="1"
+		/>
+		<span class="num-add" onclick="addCount()">+</span>
+
+		<div class="price-value" id="priceValueCount"></div>
+        <div id="quantity"></div>
+        <script src="./app.js"></script>
+	</body>
+</html>

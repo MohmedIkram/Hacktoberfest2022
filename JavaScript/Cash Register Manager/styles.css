@@ -1,0 +1,120 @@
+body
+{
+  text-align: center;
+  margin: auto;
+  background-color: #F1D18A;
+}
+table
+{
+  text-align: center;
+  margin: auto;
+  border: 3px;
+}
+table {
+  margin: 1rem auto;
+  font-size: x-large;
+  font-weight: 500;
+  border-collapse: collapse;
+background-color: #ECECEC;
+}
+
+th
+{  border: 2px solid black;
+  width: 0%;
+  padding: 0.4rem;
+}
+
+
+td {
+  border: 2px solid black;
+  width: 0%;
+  padding: 0.4rem;
+}
+h1
+{
+  font-size: 3rem;
+  padding-top: 2rem;
+  margin: auto;
+  background-color: #E7475E;
+  height:7rem;
+  border-bottom-color: #9F1E49;
+}
+.para
+{
+
+  font-size: 1.8rem;
+  width:50%;
+  text-align: center;
+  margin: 2rem auto;
+}
+h2
+{  display: inline-block;
+
+
+border-color: #F7F7F7;
+
+  text-align: center;
+  margin: auto;
+
+  background-color:#232931;
+  color:white;
+  align-self: center;
+  padding: 1rem 5rem;
+}
+.return-change
+{
+
+
+
+  border-color: #F7F7F7;
+
+    text-align: center;
+    margin: auto;
+
+    background-color:#586E72;
+    color:white;
+    align-self: center;
+    padding: 1rem 5rem;
+
+  }
+
+input
+{
+  margin: 1rem auto;
+  height:3rem;
+  width:12rem;
+  display: block;
+  border-color:#232931 ;
+  font-size: 1rem;
+  text-align: center;
+}
+#check-btn{
+  margin: auto;
+
+  display: block;
+  background-color: #24BDDF;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border-color: blue;
+}
+#error-msg
+{
+font-size: 1.5rem;
+
+}
+footer {
+  position:relative;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 1.5rem;
+  color:black;
+  font-family: cursive;
+  font-style: italic;
+}

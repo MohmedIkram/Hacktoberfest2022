@@ -1,0 +1,59 @@
+<html>
+
+<style>
+
+body {margin: 10px;}
+p{font-size:30px; font-family:clibril;  color:blue;}
+form{font-size:20px; color:green;}
+input{background-color:lightgray; border:2px solid black;}
+input:hover{background-color:white; border:3px solid black;}
+.demo{background-color:yellow; }
+.demo:hover{background-color:white; border:2px solid orange; color:red;}
+</style>
+<body text="red" bgcolor="sky blue">
+<h1 align="center">Hi everyone!!!</h1><br><br><br>
+
+<p id="demo"></p>
+
+ <form align="center">
+Enter First number : <input type="text" id="first"><br><br>
+Enter second number : <input type="text" id="second" ><br><br><br><br>
+
+<input   class="demo" type="button" onclick="multiply()" value="Multiply" /><br><br><br>
+<input  class="demo"  type="button" onclick="divide()" value="Division" /><br><br><br>
+<input  class="demo" type="button" onclick="sum()" value="Additon" /><br><br><br>
+<input  class="demo" type="button" onclick="subs()" value="Substract" /><br><br><br>
+</form>
+<p>The result is : 
+<span id="result" ></span>
+</p>
+<script>
+function multiply()
+{
+n1=document.getElementById("first").value;
+n2=document.getElementById("second").value;
+document.getElementById("result").innerHTML=n1*n2;
+}
+
+function divide()
+{
+n1=document.getElementById("first").value;
+n2=document.getElementById("second").value;
+document.getElementById("result").innerHTML=n1/n2;
+}
+function sum()
+{
+n1=document.getElementById("first").value;
+n2=document.getElementById("second").value;
+document.getElementById("result").innerHTML=Number(n1)+Number(n2);
+}
+function subs()
+{
+n1=document.getElementById("first").value;
+n2=document.getElementById("second").value;
+document.getElementById("result").innerHTML=n1-n2;
+}
+</script>
+
+</body>
+</html>
