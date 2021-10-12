@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200;300;400;500;600;700&family=Spartan:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --font-weight-bold: 700;
+    --font-weight-medium: 500;
+    --font-weight-light: 400;
+    --font-family: "Spartan", sans-serif;
+    --font-family-antonio: "Antonio", sans-serif;
+    --color-white: 0, 0%, 100%;
+    --color-background: hsl(240, 67%, 8%);
+    --color-hover: rgba(216, 216, 216, 0.2);
+    --color-mercury-menu: hsl(196, 83%, 93%);
+    --color-venus-menu: hsl(39, 88%, 73%);
+    --color-earth-menu: hsl(238, 99%, 66%);
+    --color-mars-menu: hsl(12, 100%, 64%);
+    --color-jupiter-menu: hsl(27, 75%, 70%);
+    --color-saturn-menu: hsl(40, 96%, 70%);
+    --color-uranus-menu: hsl(168, 82%, 67%);
+    --color-neptune-menu: hsl(222, 95%, 63%);
+    --color-mercury-main: hsl(194, 48%, 49%);
+    --color-venus-main: hsl(33, 82%, 61%);
+    --color-earth-main: hsl(263, 67%, 51%);
+    --color-mars-main: hsl(10, 63%, 51%);
+    --color-jupiter-main: hsl(2, 68%, 53%);
+    --color-saturn-main: hsl(17, 73%, 46%);
+    --color-uranus-main: hsl(169, 73%, 44%);
+    --color-neptune-main: hsl(222, 87%, 56%);
+}
+
+*,
+*::before,
+*::after {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer !important;
+}
