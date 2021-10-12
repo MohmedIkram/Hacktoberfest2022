@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d7eeb5;
+}
+
+.container {
+  width: 60%;
+  min-width: 600px;
+  min-height: 400px;
+  border-radius: 10px;
+  background-color: #c2c2c2;
+}
+
+.signup-form, .login-form {
+  width: 60%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+.signup-form .title, .login-form .title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.signup-form label, .login-form label {
+  align-self: flex-start;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #424242;
+}
+.signup-form .in, .login-form .in {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #494949;
+  background-color: transparent;
+}
+.signup-form .in:focus, .login-form .in:focus {
+  border-bottom: 2px solid green;
+}
+.signup-form .signup-btn, .login-form .signup-btn {
+  padding: 5px 25px;
+  color: white;
+  background-color: #a3d45a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/*
+welcome page
+*/
+.welcome-container {
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-container .title {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+.welcome-container p {
+  color: #464646;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.welcome-container .btn-container {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+  justify-content: space-between;
+  justify-self: center;
+}
+.welcome-container .btn-container a {
+  padding: 5px 25px;
+  color: white;
+  background-color: #a3d45a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.logout-btn {
+  padding: 5px 25px;
+  background-color: #f04141;
+  color: white;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */
