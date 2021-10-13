@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Typerr</title>
+  </head>
+
+  <body style="background-color: rgb(27, 27, 27)">
+    <div class="show">
+      <center>
+        <h2 style="color: rgb(218, 218, 218); padding-top: 10px">Typerr.</h2>
+      </center>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Well Done :)</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h4>
+                Words typed-
+                <span id="wordstyped" style="color: rgb(104, 104, 104)"></span>
+              </h4>
+              <h4>
+                Time taken-
+                <span id="timetaken" style="color: rgb(104, 104, 104)"></span>
+                Seconds
+              </h4>
+              <h4>
+                Typing speed-
+                <span
+                  id="wordperminute"
+                  style="color: rgb(104, 104, 104)"
+                ></span>
+                Words/Minute
+              </h4>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="margin-top: 24px; height: 100%">
+        <div class="row">
+          <div class="col-lg-8">
+            <textarea
+              id="text"
+              rows="18"
+              style="padding: 20px; width: 100%"
+              placeholder="Start typing here.."
+              onkeydown="change()"
+            ></textarea>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-body" style="text-align: center">
+                <div class="card-title">
+                  <div class="row">
+                    <div class="col-4">
+                      <div
+                        id="time"
+                        style="float: left; font-size: 30px; padding-left: 40px"
+                      ></div>
+                    </div>
+                    <div class="col-8">
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        style="float: right"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        onclick="reset()"
+                      >
+                        Stop
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body" style="text-align: center">
+                <h5 class="card-title">
+                  <input
+                    type="text"
+                    value="0"
+                    style="width: 120px; border: none; font-size: 50px"
+                    id="speed"
+                    disabled
+                  /><span style="font-size: 25px">W/M</span>
+                </h5>
+              </div>
+
+              <div class="card-body" style="text-align: center">
+                <p style="font-size: 20px; padding: 10px; font-weight: 500">
+                  History
+                </p>
+                <div class="card-title">
+                  <table id="table" class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sr No.</th>
+                        <th scope="col">Words</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Speed</th>
+                      </tr>
+                    </thead>
+                  </table>
+                  <div class="col-12">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      style="float: right"
+                      onclick="cleartables()"
+                    >
+                      clear
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var count = 0;
+        var newcount = 1;
+        let timer;
+        var time = 0;
+        function myTimer() {
+          time += 1000;
+          document.getElementById("time").innerHTML = time / 1000 + "s";
+        }
+        function reset() {
+          if (time >= 1) {
+            var table = document.getElementById("table");
+            var pre = change() / (time / 60000);
+            if (pre < 100) {
+              var prep = pre.toPrecision(2);
+            } else if (pre < 10) {
+              var prep = pre.toPrecision(1);
+            } else if (pre > +100) {
+              var prep = pre.toPrecision(3);
+            }
+
+            if (typeof Storage !== "undefined") {
+              if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount) + 1;
+              } else {
+                localStorage.clickcount = 1;
+              }
+            }
+            document.getElementById("table").innerHTML +=
+              "<tr>" +
+              "<td >" +
+              localStorage.clickcount +
+              "." +
+              "</td>" +
+              "<td>" +
+              change() +
+              "</td>" +
+              "<td>" +
+              time / 1000 +
+              "s" +
+              "</td>" +
+              "<td>" +
+              prep +
+              "</td>" +
+              "</tr>";
+            document.getElementById("wordstyped").innerHTML = change();
+            document.getElementById("timetaken").innerHTML = time / 1000;
+            document.getElementById("wordperminute").innerHTML = prep;
+
+            var k = localStorage.clickcount;
+            for (var j = 0; j <= 3; j++) {
+              localStorage.setItem(
+                "cell" + k + "" + j,
+                document.getElementById("table").rows[k].cells[j].innerHTML
+              );
+            }
+
+            var z = (document.getElementById("speed").value = 0);
+            var z = (document.getElementById("text").value = "");
+            time = 0;
+            count = 0;
+            clearInterval(timer);
+            document.getElementById("time").innerHTML = "";
+          }
+        }
+
+        function change() {
+          var x = event.which || event.keyCode;
+          var y = document.getElementById("speed").value;
+          var z = document.getElementById("text").value;
+          var l = z.length;
+          var speed = 1;
+          if (time == 0 && count == 0) {
+            timer = window.setInterval(myTimer, 1000);
+            count += 1;
+          }
+          for (var i = 0; i < l; i++) {
+            if (z[i - 1] == " ") {
+              speed += 0;
+            } else {
+              if (z[i] == " ") {
+                speed += 1;
+                document.getElementById("speed").value = speed / (time / 60000);
+              }
+            }
+          }
+          return speed;
+        }
+        function cleartables() {
+          localStorage.clear();
+          location.reload();
+        }
+        window.onload = function () {
+          retrive();
+        };
+
+        function retrive() {
+          var table = document.getElementById("table");
+          for (var i = 1; i <= localStorage.clickcount; i++) {
+            var row = table.insertRow(i);
+            for (var j = 0; j <= 3; j++) {
+              var data = localStorage.getItem("cell" + i + "" + j);
+              var cell = row.insertCell(j);
+              cell.innerHTML = data;
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>
