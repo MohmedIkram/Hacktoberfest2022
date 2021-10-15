@@ -52,10 +52,34 @@ def main():
             print('Sorry, the operation you are trying to perform is an invalid operation')
         continueChoice = input('Do you want to continue? (y/n): ')    
         if continueChoice == 'n':
-            isCalculating = False
+            isCalculating  = False
             print('Thank you for using this calculator :)')
         print("--------------------------------------------------------")
 
 if __name__ == '__main__':
     main()
+    
+ print("select operation")
+print("1.add")
+print("2.subtract")
+print("3.multiply")
+print("4.division")
+choice=input("enter choice 1/2/3/4/: ")
+number1=int(input("enter number 1: "))
+number2=int(input("enter number 2: "))
+if choice == "1":
+    
+   print(number1 + number2)
+elif choice == "2":
+    
+   print(number1 - number2)
+elif choice =="3":
+    
+   print(number1 * number2)
+elif choice == "4":
+    
+   print(number1 / number2)
+else:
+    print("invalid")
+   
     
