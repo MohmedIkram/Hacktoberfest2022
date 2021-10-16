@@ -4,8 +4,8 @@ import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-USERNAME = "ITS_ME_DIO"
-PASSWORD = "01817711262"
+USERNAME = input("Codeforces handler/email: ")
+PASSWORD = input("Password: ")
 
 # path = "/home/ahnaf/PycharmProjects/pythonProject/chromedriver"
 path = 'Your CHROMEDRIVER path'
