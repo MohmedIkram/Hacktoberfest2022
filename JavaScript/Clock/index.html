@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS &amp; JS Clock</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <main class="">
+        <div class="clock-container">
+            <div class="clock">
+                <div class="clock__hand clock__hand--second"></div>
+                <div class="clock__hand clock__hand--minute"></div>
+                <div class="clock__hand clock__hand--hour"></div>
+            </div>
+        </div>
+
+        <div class="select-container">
+            <select name="clock-select">
+                <option value="digital" selected>Digital</option>
+                <option value="am-pm">AM/PM</option>
+            </select>
+        </div>
+
+        <div class="digital-clock">
+            <div class="digital digital__hour"></div>
+            <div class="digital digital__min"></div>
+            <div class="digital digital__sec"></div>
+        </div>        
+        <div class="digital digital__info"></div>
+    </main>
+</body>
+</html>
