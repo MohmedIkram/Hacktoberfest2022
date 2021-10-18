@@ -1,4 +1,4 @@
-# Hacktober Fest 2021
+# <center> Hacktober Fest 2021 </center>
 
 ![Hacktoberfest 2021](hacktoberfest2021.PNG)
 
