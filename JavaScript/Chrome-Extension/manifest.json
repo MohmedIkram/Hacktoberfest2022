@@ -1,0 +1,22 @@
+{
+  "name": "New Tab",
+  "author": "Abhinn krishn",
+  "description": "Beautiful New Tabs Pages.",
+  "version": "1.1.0",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": { 
+    "16": "./icons/icon16.png",
+    "48": "./icons/icon48.png",
+    "128": "./icons/icon128.png" 
+  },
+  "manifest_version": 2,
+  "browser_action": {
+    "default_icon": "./icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["./Scripts/script.js"],
+    "persistent": false
+  }
+}
