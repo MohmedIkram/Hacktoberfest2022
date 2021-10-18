@@ -1,0 +1,60 @@
+/* Removing default styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: "poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(120deg, #43cea2, #185a9d);
+  color: white;
+  transition: background 1s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 40vh;
+}
+
+header p {
+  margin: 4rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+span {
+  font-size: 2rem;
+}
+
+/* Custom classes */
+.temperature-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-width: 40%;
+}
+
+.temperature-container {
+  display: flex;
+  justify-content: center;
+}
