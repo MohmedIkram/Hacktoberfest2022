@@ -1,139 +1,73 @@
-// 3. Implement a program for stack that performs following operations using array.
+// C program for array implementation of stack
+include <limits.h>
+include <stdio.h>
+include <stdlib.h>
 
-// (a) PUSH (b) POP (c) PEEP (d) CHANGE(Replace top of stack value) (e) DISPLAY
+// A structure to represent a stack
+struct Stack {
+	int top;
+	unsigned capacity;
+	int* array;
+};
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#define  size 10
-
-int isFull();
-int isEmpty();
-void push(int value);
-int pop();
-int peep();
-void change(int value);
-void display();
-
-int top = -1;
-int stack[size];
-
-int main(){
-    int operation, value;
-
-    printf("\n Ahmed Aghadi-200420107043");
-
-    do{
-        
-        system("cls");
-        printf("\n***********************\n");
-        printf("Enter 1 to PUSH, 2 to POP, 3 to PEEP, 4 to CHANGE, 5 to DISPLAY and 6 to exit");
-        printf("\n***********************\n");
-
-        scanf("%d",&operation);
-
-        switch(operation){
-            case 1: 
-            printf("\nEnter value to be pushed : ");
-            scanf("%d",&value);
-            push(value);
-            break;
-
-            case 2: 
-            value = pop();
-            printf("\n %d \n",value);
-            break;
-
-            case 3: 
-            value = peep();
-            printf("\n %d \n",value);
-            break;
-            
-            case 4: 
-            printf("\nEnter value to be changed : ");
-            scanf("%d",&value);
-            change(value);
-            break;
-
-            case 5: 
-            display();
-            break;
-
-            case 6:
-            break;
-
-            default:
-            printf("\nEnter value between 1 and 5.");
-        }
-
-        system("pause");
-    }while(operation != 6);
+// function to create a stack of given capacity. It initializes size of
+// stack as 0
+struct Stack* createStack(unsigned capacity)
+{
+	struct Stack* stack = (struct Stack*)malloc(sizeof(struct Stack));
+	stack->capacity = capacity;
+	stack->top = -1;
+	stack->array = (int*)malloc(stack->capacity * sizeof(int));
+	return stack;
 }
 
-int isFull(){
-    if(top>=size-1){
-        return 1;
-    }else{
-        return 0;
-    }
+// Stack is full when top is equal to the last index
+int isFull(struct Stack* stack)
+{
+	return stack->top == stack->capacity - 1;
 }
 
-int isEmpty(){
-    if(top==-1){
-        return 1;
-    }else{
-        return 0;
-    }
+// Stack is empty when top is equal to -1
+int isEmpty(struct Stack* stack)
+{
+	return stack->top == -1;
 }
 
-void push(int value){
-    if(isFull()){
-        printf("Stack is Full!");
-        exit(0);
-    }
-
-    top++;
-    stack[top] = value;
+// Function to add an item to stack. It increases top by 1
+void push(struct Stack* stack, int item)
+{
+	if (isFull(stack))
+		return;
+	stack->array[++stack->top] = item;
+	printf("%d pushed to stack\n", item);
 }
 
-int pop(){
-    if(isEmpty()){
-        printf("Stack is Empty!");
-        exit(0);
-    }
-
-    top--;
-    return stack[top+1];
+// Function to remove an item from stack. It decreases top by 1
+int pop(struct Stack* stack)
+{
+	if (isEmpty(stack))
+		return INT_MIN;
+	return stack->array[stack->top--];
 }
 
-int peep(){
-    if(isEmpty()){
-        printf("Stack is Empty!");
-        exit(0);
-    }
-
-    return stack[top];
+// Function to return the top from stack without removing it
+int peek(struct Stack* stack)
+{
+	if (isEmpty(stack))
+		return INT_MIN;
+	return stack->array[stack->top];
 }
 
-void change(int value){
-    if(isEmpty()){
-        printf("Stack is Empty!");
-        exit(0);
-    }
+// Driver program to test above functions
+int main()
+{
+	struct Stack* stack = createStack(100);
 
-    stack[top] = value;
+	push(stack, 10);
+	push(stack, 20);
+	push(stack, 30);
+
+	printf("%d popped from stack\n", pop(stack));
+
+	return 0;
 }
-
-void display(){
-    int i;
-    if(isEmpty()){
-        printf("Stack is Empty!");
-        exit(0);
-    }
-
-    for(i = 0; i <= top; i++){
-        printf("\n %d",stack[top-i]);
-    }
-    printf("\n");
-}
-
