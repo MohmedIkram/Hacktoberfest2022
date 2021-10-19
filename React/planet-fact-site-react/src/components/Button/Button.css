@@ -1,0 +1,130 @@
+.button-container {
+    position: relative;
+    top: 0.7rem;
+    display: none;
+    justify-content: space-between;
+}
+
+.button-container::after {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: -1rem;
+    width: 110%;
+    height: 2px;
+    background-color: white;
+    opacity: 0.2;
+}
+
+.button-container button {
+    padding: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--font-family);
+    font-size: .9rem;
+    font-weight: 700;
+    position: relative;
+}
+
+.button-container button::after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-earth-main);
+    transition: all .3s;
+    opacity: 0;
+}
+
+.earth-btn:hover.earth-btn::after,
+.earth-btn:hover.earth-btn:active {
+    opacity: 1;
+}
+
+.venus-btn::after {
+    background-color: var(--color-venus-main) !important;
+}
+
+.venus-btn:hover.venus-btn::after,
+.venus-btn:hover.venus-btn:active {
+    opacity: 1;
+}
+
+.mars-btn::after {
+    background-color: var(--color-mars-main) !important;
+}
+
+.mars-btn:hover.mars-btn::after,
+.mars-btn:active.mars-btn::after {
+    opacity: 1;
+}
+
+.saturn-btn::after {
+    background-color: var(--color-saturn-main) !important;
+}
+
+.saturn-btn:hover.saturn-btn::after,
+.saturn-btn:hover.saturn-btn:active {
+    opacity: 1;
+}
+
+.uranus-btn::after {
+    background-color: var(--color-uranus-main) !important;
+}
+
+.uranus-btn:hover.uranus-btn::after,
+.uranus-btn:hover.uranus-btn:active {
+    opacity: 1;
+}
+
+.jupiter-btn::after {
+    background-color: var(--color-jupiter-main) !important;
+}
+
+.jupiter-btn:hover.jupiter-btn::after,
+.jupiter-btn:hover.jupiter-btn:active {
+    opacity: 1;
+}
+
+.mercury-btn::after {
+    background-color: var(--color-mercury-main) !important;
+}
+
+.mercury-btn:hover.mercury-btn::after,
+.mercury-btn:hover.mercury-btn:active {
+    opacity: 1;
+}
+
+.neptune-btn::after {
+    background-color: var(--color-neptune-main) !important;
+}
+
+.neptune-btn:hover.neptune-btn::after,
+.neptune-btn:hover.neptune-btn:active {
+    opacity: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .button-container {
+        display: flex;
+    }
+    .button-container button {
+        font-size: 0.7rem;
+    }
+    nav {
+        padding: 2rem 1rem !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .button-container button {
+        font-size: 0.7rem;
+    }
+    nav {
+        padding: 2rem 1rem !important;
+    }
+}

@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    display: flex;
+    align-content: center;
+    height: 350px;
+    width: 400px;
+
+}
+#jokestext{
+    display:flex;
+    margin: auto 10px;
+    align-content: space-around;
+    font-size: 25px;
+    border: 2px solid blue;
+    color:chartreuse;
+    position: absolute;
+    top:110px;
+    padding: 2px;
+}
+#emoji1{
+    display:flex;
+    
+    font-size: 25px;
+    height: 100px;
+    width:50px;
+    position: absolute;
+    top:35px;
+    left:5px;
+
+}
+#emoji2{
+    display:flex;
+    align-content: space-around;
+    font-size: 25px;
+    height: 100px;
+    width:50px;
+    position: absolute;
+    top:35px;
+    right:5px;
+
+}
+#emoji3{
+    display:flex;
+    align-content: space-around;
+    font-size: 25px;
+    height: 100px;
+    width:50px;
+    position: absolute;
+    bottom:10px;
+    left:5px;
+
+}
+#emoji4{
+    display:flex;
+    align-content: space-around;
+    font-size: 25px;
+    height: 100px;
+    width:50px;
+    position: absolute;
+    bottom:10px;
+    right:5px;
+
+}

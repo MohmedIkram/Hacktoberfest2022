@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcEasy</title>
+    <link rel="stylesheet" href="../MetalWeightCalculator/style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Metal Weight Calculator</a>
+                <a href="triop.html">Simple Calculator</a>
+                <a href="#">Triangle Operations</a>
+                <a href="#">Math assignments</a>
+            </div>
+        </div>
+        <div class="header">
+            <a href="#" class="logo">CalcEasy</a>
+            <div class="header-right">
+                <span style="
+              font-size: 30px;
+              cursor: pointer;
+              float: right;
+              vertical-align: middle;
+              color: green;
+            " onclick="openNav()">&#9776;</span>
+            </div>
+        </div>
+        <div class="card">
+            <p style="
+            background-color: green;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            margin: 0;
+          ">
+                METAL WEIGHT CALCULATOR
+            </p>
+            <p style="text-align: center">
+                Material
+                <select id="material" onchange="opSelect()">
+                    <option value="1">Steel (default)</option>
+                    <option value="2">Aluminum 1100</option>
+                    <option value="3">Aluminum 2011</option>
+                    <option value="4">Aluminum 2014</option>
+                    <option value="5">Aluminum 2017</option>
+                    <option value="6">Aluminum 2024</option>
+                    <option value="7">Aluminum 3003</option>
+                    <option value="8">Aluminum 5005</option>
+                    <option value="9">Aluminum 5052</option>
+                    <option value="10">Aluminum 5056</option>
+                    <option value="11">Aluminum 5083</option>
+                    <option value="12">Aluminum 5086</option>
+                    <option value="13">Aluminum 6061</option>
+                    <option value="14">Aluminum 6063</option>
+                    <option value="15">Aluminum 7050</option>
+                    <option value="16">Aluminum 7075</option>
+                    <option value="17">Aluminum 7178</option>
+                    <option value="18">Stainless 300 Series</option>
+                    <option value="19">Stainless 400 Series</option>
+                    <option value="20">Nickel 200</option>
+                    <option value="21">Nickel 400</option>
+                    <option value="22">Nickel R-405</option>
+                    <option value="23">Nickel K-500</option>
+                    <option value="24">Nickel 600</option>
+                    <option value="25">Nickel 625</option>
+                    <option value="26">Nickel 800H</option>
+                    <option value="27">Nickel 800AT</option>
+                    <option value="28">Nickel 825</option>
+                    <option value="29">Nickel 330</option>
+                    <option value="30">Nickel 20</option>
+                    <option value="31">Nickel C-276</option>
+                    <option value="32">Nickel 2545MD</option>
+                    <option value="33">Magnesium</option>
+                    <option value="34">Beryllium</option>
+                    <option value="35">Titanium</option>
+                    <option value="36">Zirconium</option>
+                    <option value="37">Cast Iron</option>
+                    <option value="38">Zinc</option>
+                    <option value="39">Brass</option>
+                    <option value="40">Columbium</option>
+                    <option value="41">Copper</option>
+                    <option value="42">Molybdenum</option>
+                    <option value="43">Silver</option>
+                    <option value="44">Lead</option>
+                    <option value="45">Tantalum</option>
+                    <option value="46">Tungsten</option>
+                    <option value="47">Gold</option>
+                </select>
+            </p>
+            <p style="text-align: center">
+                Shape
+                <select id="shape" onchange="shapeSelect()">
+                    <option selected value="1">Round</option>
+                    <option value="2">Square</option>
+                    <option value="3">Rectangle</option>
+                    <!--<option value="4">Hexagonal</option>
+                    <option value="5">Octagonal</option>-->
+                    <option value="6">Sheet</option>
+                    <option value="7">Plate</option>
+                    <option value="8">Tubular</option>
+                    <option value="9">Ring</option>
+                    <option value="10">Pipe</option>
+                </select>
+            </p>
+
+            <table>
+                <tr class="change2">
+                    <td colspan="3" id="imgcontainer">
+                        <center>
+                            <img src="../MetalWeightCalculator/img/round.png" id="image1" style="
+                    border: 2px solid green;
+                    opacity: 0.7;
+                    border-radius: 12px;
+                  " />
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td>
+                        <input type="number" id="quantity" autocomplete="off" value="1" min="1" />
+                    </td>
+                    <td></td>
+                    <td rowspan="4" id="imgcontainer" class="change1">
+                        <img src="../MetalWeightCalculator/img/round.jpg" id="image2" style="
+                  border: 2px solid green;
+                  opacity: 0.7;
+                  border-radius: 12px;
+                " />
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowOne">Diameter</td>
+                    <td>
+                        <input type="number" step="any" id="paraOneInput" autocomplete="off" min="1" />
+                    </td>
+                    <td>
+                        <select id="unitSelect1">
+                            <option id="1">mm</option>
+                            <option id="2">m</option>
+                            <option id="3">cm</option>
+                            <option id="4">ft</option>
+                            <option id="5">yd</option>
+                            <option id="6">in</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowTwo"></td>
+                    <td>
+                        <input type="number" step="any" id="paraTwoInput" autocomplete="off" min="1" />
+                    </td>
+                    <td>
+                        <select id="unitSelect2">
+                            <option id="1">mm</option>
+                            <option id="2">m</option>
+                            <option id="3">cm</option>
+                            <option id="4">ft</option>
+                            <option id="5">yd</option>
+                            <option id="6">in</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="rowThree">Length</td>
+                    <td>
+                        <input type="number" step="any" id="paraThreeInput" autocomplete="off" min="1" />
+                    </td>
+                    <td>
+                        <select id="unitSelect3">
+                            <option id="1">mm</option>
+                            <option id="2">m</option>
+                            <option id="3">cm</option>
+                            <option id="4">ft</option>
+                            <option id="5">yd</option>
+                            <option id="6">in</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <center>
+                <button id="myBtn" onclick="calculate(shapeSelect,opSelect)">
+                    calculate
+                </button>
+            </center>
+
+            <p id="demo"></p>
+        </div>
+    </div>
+    <script src="../MetalWeightCalculator/index.js"></script>
+</body>
+
+</html>

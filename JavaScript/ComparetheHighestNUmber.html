@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to compare numbers and return the highest.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var a = Math.max(5, 10);
+  var b = Math.max(0, 150, 30, 20, 38);
+  var c = Math.max(-5, 10);
+  var d = Math.max(-5, -10);
+  var e = Math.max(1.5, 2.5);
+
+  var x = a + "<br>" + b + "<br>" + c + "<br>" + d + "<br>" + e;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

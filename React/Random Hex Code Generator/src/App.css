@@ -1,0 +1,34 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  place-items: center;
+
+  transition: all 0.5s ease-in-out;
+}
+
+button {
+  padding: 20px 50px;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Segoe UI';
+  border: none;
+  background-color: white;
+  border-radius: 11px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px 2px rgba(0, 0, 0, 0.15);
+  transform: translate3d(0, -5px, 5px);
+
+  transition: color 0.5s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: translate3d(0, 0, 0);
+  box-shadow: none;
+}
