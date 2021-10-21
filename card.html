@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href = "style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class ="logo">Metier</a>
+            <div class ="toggle"></div>
+        </header>
+       <div class="row"style="margin-left:80px;width:90%">
+           <div class="column">
+               <div class="card">
+                <h1 contenteditable style="background-color: aliceblue;" id="myP">QUESTION 1</h1>
+               </div>
+           </div>
+       <div class="column">
+        <div class="card">
+          <h1 contenteditable style="background-color: aliceblue;" id="myP">QUESTION 1</h1>
+            <textarea> </textarea>
+        </div>
+</div>
+<div class="column">
+    <div class="card">
+      <h1 contenteditable style="background-color: aliceblue;" id="myP">QUESTION 1</h1>
+    </div>
+</div>
+
+  
+</div>
+
+<div class="row" style="padding-left:220px;width:80%;overflow: hidden;">
+    <div class="column">
+        <div class="card">
+          <h1 contenteditable style="background-color: aliceblue;" id="myP">QUESTION 1</h1>
+         <textarea> Enter your question</textarea>
+        </div>
+    </div>
+<div class="column" >
+ <div class="card">
+     
+     <h1 contenteditable style="background-color: aliceblue;" id="myP">QUESTION 1</h1>
+     
+
+ </div>
+</div>
+</div>
+
+    </section>
+    <button onclick="myFunction()">Try it</button>
+    <script type="text/javascript">
+    function myFunction() {
+  document.getElementById("myP").contentEditable = true;
+  document.getElementById("demo").innerHTML = "The p element above is now editable. Try to change its text.";
+}
+  
+    </script>
+</body>
+</html>
