@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rohan Singh Bisht</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top_container">
+            <img class="top-cloud" src="images/cloud.png" alt="cloud-image">
+            <h1>I'm Rohan.</h1>
+            <h2 style="font-weight: normal;margin-top: 10px;">A Computer Science Enthusiast</h2>
+            <img class="bottom-cloud" src="images/cloud.png" alt="cloud-image">
+            <img class="img0" src="images/mountain.png" alt="cloud-image">
+        </div>
+        <div class="middle-container">
+            <div class="profile">
+              <img class="profilepic" src="images/rohan.png" alt="Profile Picture" height="180px" width="180px">
+              <h2>Hello,</h2>
+              <p class="bio">Iam an enthusiast and a learner. I love to code and develop new things. <br> I ♥ football and making art.</p>
+            </div>
+            <hr class="dot">
+            <div class="skills">
+              <h2>My Skills</h2>
+              <div class="skill-row">
+                <img class="img1" src="images/coding.png" alt="Code Image">
+                <h3>Code And Development</h3>
+                <p>I started learning coding when i was in class 11th. I love to code & <br> develop new things. I can code in C++, Java and Python.</p>
+              </div>
+              <div class="skill-row">
+                <img class="img2" src="https://media.giphy.com/media/3oKIPkOl1M92aKiNtC/giphy.gif" alt="Football">
+                <h3>Football</h3>
+                <p>I love to play football. I have been playing football for my college team since 2017.</p> <br>
+              </div>
+            </div>
+            <hr class="dot">
+            <div class="contact-me">
+              <h2>Get In Touch</h2>
+              <h3>A simple hello could lead to million things.</h3>
+              <p>Be happy. Spread Happiness. Cheers !</p>
+              <a class="btn" href="mailto:rsb97695@email.com">CONTACT ME</a>
+            </div>
+          </div>
+          
+          <div class="bottom-container">
+            <a class="footer-link" href="https://www.linkedin.com/in/rohan-singh-463283186/"><img class="social" src="images/linkedin.png" alt="linkedin"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a class="footer-link" href="https://twitter.com/RohanSi18459639"><img class="social" src="images/twitter.png" alt="Twitter"></a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <a class="footer-link" href="https://www.instagram.com/rohan._.singh._.bisht/"><img class="social" src="images/instagram.png" alt="instagram"></a>
+            <p style="color: #EAF6F6;font-size: 15px;">© 2021 Rohan Singh Bisht</p>
+          </div>
+    </body>
+</html>
