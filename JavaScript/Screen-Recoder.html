@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Screen Recorder</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div class="row">
+			<div class="col jumbotron">
+				<h3 class="text-center">Screen Recorder</h3>
+				<p class="text-center text-muted">( Light Version )</p>
+			</div>
+		</div>
+	</div>
+	</header>
+
+	<section>
+		<div class="container p-4">
+			<div class="row">
+				<div class="col-md-6 text-center p-2" style="margin-top: 50px; " >
+					<ul style="list-style: none;">
+							<li> 1. Click on the <i class="text-primary">Screen Capture</i> button then click which tabs to record. </li>
+							<li> 2. Click on the <i class="text-success">Start</i> button to start Recording. </li>
+							<li> 3. Click on the <i class="text-danger">Stop</i> button to stop Recording. </li>
+							<li> 4. Finally watch the preview video and then download the video. </li>
+						</ul>
+						<button class="btn btn-primary text-center" style="margin-top: 50px;" onclick="startScreen();">Screen capture</button>
+				</div>
+				<div class="col-md-6 p-2">
+					<video id="finalmovie" width="500px" height="300px" autoplay controls ></video>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container text-center p-4 ">
+			<div class="row">
+				<div class="col text-center">
+						<button id="start" class="btn btn-success">Start</button>
+		                <button id="stop"  class="btn btn-danger">Stop</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<footer>
+		<div class="container text-center p-4">
+			<div class="row">
+				<div class="col text-center">
+						<h5> Copywrite &copy; 2021</h5>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+	function startScreen() {
+    navigator.mediaDevices["getDisplayMedia"]({video:true}).then( stream=> {
+		let mediaRecorder=new MediaRecorder(stream);
+		let start=document.getElementById('start');
+		let stop=document.getElementById('stop');
+		let saved=document.getElementById('finalmovie');
+         let chunks=[];
+		start.addEventListener('click',(ev)=>{
+			mediaRecorder.start();
+			console.log(mediaRecorder.state);
+		});
+		stop.addEventListener('click',(ev)=>{
+			mediaRecorder.stop();
+		})
+
+		mediaRecorder.ondataavailable=(ev)=>{
+            chunks.push(ev.data);
+		}
+
+		mediaRecorder.onstop=(ev)=>{
+			let blob=new Blob(chunks,{ 'type':'video/mp4;'});
+             chunks=[];
+             let videoURL=window.URL.createObjectURL(blob);
+             saved.src=videoURL;
+		}
+	});
+  }
+</script> 
+</body>
+</html>
+<center>
+	
