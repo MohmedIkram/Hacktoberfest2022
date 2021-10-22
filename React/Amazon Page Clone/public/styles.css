@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.watch-stats{
+    width: 35%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
