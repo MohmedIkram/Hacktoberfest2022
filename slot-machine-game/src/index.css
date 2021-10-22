@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.slotmachine {
+  padding: 30px 0;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-size: 1.5rem;
+  font-weight: 1;
+  color: #e06868;
+  background-color: rgba(213, 184, 250, 0.89);
+  margin-bottom: 30px;
+}
+.slot_inner {
+  text-align: center;
+  font-size: small;
+  font-weight: 1;
+  border-style: ridge;
+  margin: 20px;
+  width: 320px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
