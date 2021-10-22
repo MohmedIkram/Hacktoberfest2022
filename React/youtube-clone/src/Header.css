@@ -1,0 +1,67 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+.header__left
+{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo
+{
+    align-items: center;
+    height: 25px;
+   
+    object-fit: contain; /* //if this would have been a png then we can use this just to fit into container  */
+    margin-left: 20px;
+   
+}
+
+.header__input
+{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    width: 100%;
+}
+.header__center
+{
+    display: flex;  
+    width: 40%;
+    
+}
+
+.header__icons
+{
+    display: flex;
+    align-items: center;
+}
+
+.header__input>input{
+    flex: 1;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header__inputButton
+{
+    width: 50px!important;
+    background-color: #fafafa;
+    border-left: 1px solid lightgrey;
+    color: lightgray;
+    cursor: pointer;
+}
+.header__inputButtonMic
+{
+    cursor: pointer;
+    margin-left: 10px;
+}
