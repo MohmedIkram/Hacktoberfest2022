@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="icon" href="img.png" >
+    <link rel="stylesheet" href="style.css">
+    <title>QuItZ</title>
+</head>
+<body>
+    <section>
+        <!-- first row 
+             Quiz name and toggle button -->
+        <div class="header-quiz">
+            <h1>Quiz <span>Time</span></h1>
+            <button class="nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+
+        <!-- side bar  -->
+        <div class="side-bar">
+            <ul class="languages">
+                <li><a href="HTML.html" id="html">HTML</a></li>
+                <li><a href="css.html" id="css">CSS</a></li>
+                <li><a href="js.html" id="js">Java Script</a></li>
+                <li><a href="git.html" id="git">Git / Git Hub</a></li>
+            </ul>
+        </div>
+
+        <!-- HOME 
+            1) where 2 screen plays
+                * 1 screen hold the language name
+                ** 2nd screen hold the quiz questions
+         -->
+         <div class="home">
+             <div class="inner-home">
+
+             <div class="language-name">
+                <h1 class="lang">CSS <br><span class="span">Quiz</span></h1>
+             </div>
+
+             <div class="questions">
+                
+                 <!-- question para  -->
+                 <div class="question-page">
+
+                    <h3 >question no  <span class="question-number"> 1</span></h3>
+
+                    <div class="radio-para">
+            <p class="question-para">This the first question ?
+            </p>
+                
+                <div class="radio-opt">
+                    <input type="radio" id="opt1" name="in1" value="huey"
+                           >
+                           <!-- <br> -->
+                    <label id="lab1" for="opt1">Huey</label>
+                 
+                    <input type="radio" id="opt2" name="in1" value="dewey">
+                    <label id="lab2" for="opt2">Dewey</label>
+                 
+                    <input type="radio" id="opt3" name="in1" value="louie">
+                    <label id="lab3" for="opt3">Louie</label>
+                  </div>
+                </div>
+           
+            
+            
+            
+                 </div>
+                 <!-- chevron right left -->
+                 <div class="button-container">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <!-- submit button -->
+                <button class="submit-btn">SUBMIT</button>
+                <!-- result will be on pop up for 1 minute  -->
+             </div>
+            </div>
+         </div>
+
+         <!-- related Questions  -->
+         <!-- <div class="related-info">
+             <h1>Ads By H`M</h1>
+             <ul class="related-posts">
+                 <li><a href="https://www.thedevnation.com/full-stack-web-development"target="_blank">* LEARN WEB  DEVELOPMENT </a></li>
+                 <li><a href="https://www.thedevnation.com/data-science-program" target="_blank">* To BE DATA  SCIENTIST</a></li>
+                 <li><a href="https://www.crunchbase.com/organization/explainx-ai" target="_blank">* AI CAREER EXPLAINx.ai </a></li>
+                 <li><a href="https://thedevnation.com" class="last-one">* TOP FREELANCER</a></li>
+             </ul>
+         </div> -->
+    </section>
+</body>
+<!-- js file  -->
+<script src="css.js"></script>
+</html>
