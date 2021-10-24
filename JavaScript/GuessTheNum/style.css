@@ -1,0 +1,50 @@
+#mybtn{
+    padding:5px 30px ;
+    border-radius:0px ;
+    margin-left:40%;
+    margin-top:20px ;
+    
+  }
+  #main{
+      margin: 0 auto ;
+      text-align: center ;
+  }
+  
+  #mybtn:focus{
+    outline:none ;
+    box-shadow:none ;
+  }
+  
+  
+  h1{
+   text-align:center ;
+   padding-top:20px ;
+  }
+  .input-val{
+    width:250px ;
+    margin:0 auto ;
+    padding:20px ;
+    
+  }
+  
+  #inpval:focus{
+    outline:none ;
+    box-shadow:none ;
+   }
+  
+  #check,#reset{
+    padding:5px 25px ;
+    border-radius:0 ;
+  }
+  #check:focus,#reset:focus{
+    outline:none ;
+    box-shadow:none ;
+   }
+  
+  .btn-grp{
+    margin-left:44% ;
+  }
+  h3{
+    margin-left:6%;
+    padding-top:20px
+  }
