@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Temperature Convert Program Celsius to Fahrenheit </title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1> Temperature Convert Program Celsius to Fahrenheit </h1>
+
+  <div class="card">
+    <h2> Insert a value in the Celsius field to convert the value to Fahrenheit : </h2>
+    <p>
+      <label>Celsius : </label>
+      <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)"
+        onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
