@@ -1,0 +1,1 @@
+curl -s -X GET "https://v2.jokeapi.dev/joke/Any?format=txt"
