@@ -1,0 +1,183 @@
+    @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(bg2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    h1 {
+        /* margin-bottom: 20px; */
+        color: black;
+        font-family: 'Special Elite', cursive;
+        letter-spacing: 0.10ch;
+        font-size: 3.5em;
+    }
+    
+    .calc {
+        height: 650px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        box-shadow: 0 45px 70px rgba(0, 0, 0, 0.30), 0 40px 70px rgba(0, 0, 0, 0.22), 0 40px 70px rgba(0, 0, 0, 0.22);
+        border-radius: 40px;
+        background-image: url("calcbg.jpg");
+        background-position: center;
+    }
+    
+    .btns {
+        /* background-color: crimson; */
+        height: 350px;
+        width: 400px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 92.5px);
+        grid-gap: 10px;
+    }
+    
+    .btn {
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgb(231, 199, 17);
+        border: 3px solid rgb(107, 96, 30);
+        border-radius: 10px;
+        font-size: x-large;
+        font-weight: bold;
+        font-family: 'Special Elite', cursive;
+    }
+    
+    .btn:active {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+    
+    .equal_to {
+        grid-row: 4/6;
+        grid-column: 4/5;
+    }
+    
+    .btn0 {
+        grid-column: 1/3;
+    }
+    
+    .input {
+        height: 80px;
+        width: 400px;
+        text-align: right;
+        font-family: 'Special Elite', cursive;
+        font-size: xx-large;
+        padding-right: 10px;
+        color: #f5f9ad;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        border: orangered solid 0.1px;
+        /* background-image: url("bg2 - Copy.jpg"); */
+        background-image: linear-gradient(to right, rgb(20, 125, 95), rgb(20, 106, 79));
+    }
+    
+    .divide,
+    .multiply,
+    .add,
+    .substract,
+    .dot,
+    .equal_to,
+    .erase,
+    .clear {
+        border: 3px solid rgb(51, 16, 16);
+        background-color: rgb(145, 45, 45);
+        color: whitesmoke;
+    }
+    
+    .toast {
+        background-color: rgb(231, 199, 17);
+        padding: 1rem;
+        border-radius: 20px;
+        color: black;
+        margin: 10px;
+    }
+    
+    .container {
+        position: fixed;
+        bottom: 10px;
+        right: 50px;
+    }
+    
+    label {
+        background-color: rgb(32, 32, 32);
+        border-radius: 50%;
+        user-select: none;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+    }
+    
+    body.dark .calc .input {
+        background-image: linear-gradient(to right, rgb(51, 58, 63), rgb(53, 60, 65));
+        color: whitesmoke;
+        border: none;
+    }
+    
+    body.dark .calc {
+        /* background: rgb(19, 19, 19); */
+        background-image: url("calcbg2.jpg");
+    }
+    
+    body.dark .btn {
+        background-color: azure;
+        border: 2px solid rgb(184, 204, 204);
+    }
+    
+    body.dark .toast {
+        background-color: rgb(125, 209, 0);
+        color: white;
+    }
+    
+    body.dark .divide,
+    body.dark .multiply,
+    body.dark .add,
+    body.dark .substract,
+    body.dark .dot,
+    body.dark .equal_to,
+    body.dark .erase,
+    body.dark .clear {
+        background-color: rgb(125, 209, 0);
+        border: 2px solid rgb(67, 112, 0);
+    }
+    
+    body.dark h1 {
+        color: aliceblue;
+    }
+    
+    body.dark {
+        background-image: url(bg3.jpg);
+    }
+    
+    body.dark label {
+        background-color: rgb(20, 115, 87);
+    }
+    
+    .toggle-container {
+        position: fixed;
+        top: 30px;
+        right: 80px;
+    }
+    
+    #mode {
+        visibility: hidden;
+    }
