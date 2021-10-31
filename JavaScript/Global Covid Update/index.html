@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Global Covid Update Cases</title>
+  <script src="code.js" defer></script>
+
+</head>
+<body>
+
+  <div cass="container">
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-4 mt-4">
+        <section>
+          <div class="container bg-dark p-4 text-white">
+            <div class="row">
+            <div class="col-3 text-center">
+              <img src="earth.png" width="50" height="50">
+            </div>
+            <div class="col-6 text-center">
+              <h5>GLOBAL CORONA UPDATE</h5>
+            </div>
+            <div class="col-3 text-center">
+              <img src="mask.png" width="50" height="50">
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-6 text-center bg-light  p-3">
+              <h4>Total Confirmed</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="1"></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center bg-light  p-3">
+              <h4>Total Recovered</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="2"></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center bg-light  p-3">
+              <h4>Total Deaths</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="3"></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center bg-light  p-3">
+              <h4>New Confirmed</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="4"></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center bg-light  p-3">
+              <h4>New Recovered</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="5"></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 text-center bg-light p-3">
+              <h4>New Deaths</h4>
+            </div>
+
+            <div class="col-6 text-center bg-light p-3">
+              <h4 id="6"></h4>
+            </div>
+          </div>
+        </div>
+      <section>
+        <div class="container text-center bg-dark py-3 text-white">
+            <div class="row text-center">
+                <div class="col-12">
+                    <button id="get-btn" class="btn btn-warning">Generate</button>
+                </div>
+            </div>
+          </div>        
+      </section>
+      </div
+    </div>
+  </div>
+</body>
+</html>
