@@ -1,3 +1,5 @@
+// This is a program for merge sort algorithm.
+
 #include <stdio.h>  
   
 /* Function to merge the subarrays of a[] */  
@@ -79,3 +81,5 @@ int main()
     printArray(a, n);  
     return 0;  
 }  
+
+// End of the program
