@@ -1,3 +1,5 @@
+// This is a guessing game program made with C language
+
 #include<stdio.h>
 int main()
 {
@@ -26,3 +28,6 @@ int main()
 	  }
 	return 0;
 }
+
+
+// End of the program
