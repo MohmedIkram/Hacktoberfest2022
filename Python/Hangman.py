@@ -1,3 +1,32 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@MaestroDagan 
+MaestroDagan
+/
+UrlShortener
+Public
+forked from MohmedIkram/Hacktoberfest2021
+Code
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+UrlShortener/Python/Hangman.py /
+@gulfamhaseeb
+gulfamhaseeb Create Hangman.py
+Latest commit ceb60d5 on 25 Oct 2021
+ History
+ 1 contributor
+175 lines (143 sloc)  4.55 KB
+
 def hanged(chances):
     if chances==6:
         print("      \n"
@@ -172,4 +201,18 @@ print ("\nHello, " , username, "Lets play the game!")
 
 Hangman()
     
-
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+UrlShortener/Hangman.py at main · MaestroDagan/UrlShortener
