@@ -1,175 +1,82 @@
-def hanged(chances):
-    if chances==6:
-        print("      \n"
-             " +---+\n"
-             " |   |\n"
-             "     |\n"
-             "     |\n"
-             "     |\n"
-             "     |\n"
-             "=======\n")
-    elif chances==5:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              "     |\n"
-              "     |\n"
-              "     |\n"
-              "=======\n")
-    elif chances==4:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              " |   |\n"
-              " |   |\n"
-              "     |\n"
-              "=======\n")
-    elif chances==3:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              "\|   |\n"
-              " |   |\n"
-              "     |\n"
-              "=======\n")
-    elif chances==2:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              "\|/  |\n"
-              " |   |\n"
-              "     |\n"
-              "=======\n")
-    elif chances==1:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              "\|/  |\n"
-              " |   |\n"
-              "/    |\n"
-              "=======\n")
-    elif chances==0:
-        print("      \n"
-              " +---+\n"
-              " |   |\n"
-              " O   |\n"
-              "\|/  |\n"
-              " |   |\n"
-              "/ \  |\n"
-              "=======\n")
-
-def play_loop():
-    global play_game
-    response=["y", "n","Y","N"]
-    play_game = input("Do You want to play again? y = yes, n = no \n")
-    while play_game not in response:
-        play_game = input("Do You want to play again? y = yes, n = no \n")
-    if play_game == "y":
-        Hangman()
-    elif play_game == "n":
-        print("Thanks For Playing! We expect you back again!")
-        exit()
-        # Initializing all the conditions required for the game:
-
-        
 import random
-# number of chances given to users 
 
-#list from which word will be selected for guessing
-listOfWords = ['APPLE', 'BILBO', 'CHORUSED', 'DISIMAGINE',
-               'ENSURING', 'FORMALISING', 'GLITCHES', 'HARMINE', 'INDENTATION',
-               'JACKED', 'KALPACS', 'LAUNDRY', 'MASKED', 'NETTED', 'OXFORD',
-               'PARODY', 'QUOTIENTS', 'RACERS', 'SADNESS',
-               'THYREOID', 'UNDUE', 'VENT', 'WEDGED', 'XERIC',
-               'YOUTHHOOD', 'ZIFFS']
+board ={}
+print("'Welcome to hangman!'")
+print("You will have three chances. Try not to die. Goodluck!")
 
-#generating random words from list for guessing
-def randomword(list):
-    word=random.choice(list)
-    word=word.lower()
-    return word
+words = ['table', 'chair', 'bookcase', 'closet']
 
-def Hangman():
-
-    # random word from list for guessing
-    word= randomword(listOfWords)
-
-    print ("\nLets start guessing a letter\n")
-    guesses=''
-    chances = 6
-    #giving chances to user until all chances availed
-    while chances > 0:
-        # calling hanged function for printing hanged person pattern
-        hanged(chances)
-
-        availed = 0
-
-        # for every character in word    
-        for x in word:
-            #if the guessed letter is in the required word
-            if x in guesses:         
+def show_board(board):
+    for each in board:
+        print(board[each], end = " ")
         
-            # print then out the character
-                print (x,end = ''),    
-
-            else:
-        
-            # if not found, print a dash
-                print ("_ ",end = ''),     
-           
-            # and increase the failed counter with one
-                availed += 1    
-
-        # if availed is equal to zero
-
-        # print You Won
-        if availed == 0:
-            print ("")
-            print ("You won")
-            play_loop()
-
-        # exit the script
-            break              
-
-        print
-
-
-        # ask the user go guess a letter from word
-        guess = input("\n\nTry to guess a letter:")
-
-        # set the players guess to guesses
-        guesses += guess                    
-
-        # if the guess is not found in the secret word
-        if guess not in word:         
-     
-        # print wrong
-            print ("\nWrong")
-             
-         # turns counter decreases with 1 (now 9)
-            chances -= 1 
-     
-        # how many turns are left
-            print ("\nYou have", + chances, 'more guesses') 
-     
-        # if availed all the chances
-            if chances == 0:
-                hanged(chances)
-        
-            # print "You Lose"
-                print ("\nYou Lose. The correct word is ",word)
-                play_loop()
-
-
-#Asking user for name
-username = input("What is your name? ")
-print ("\nHello, " , username, "Lets play the game!")               
-
-Hangman()
+def setup_board(total):
+    for each in range(0, total):
+        board[each] = "_"
     
+def wordshow(check_list,word_list, chosen, total, past_index=None):
+    reveal = random.choice(range(0,total))
+    if past_index is not None:
+        while past_index == reveal:
+            reveal = random.choice(range(0,total))
+        letter = check_list[reveal]
+        check_and_remove_letter(check_list,word_list,total,letter)
+    else:
+        letter = check_list[reveal]
+        check_and_remove_letter(check_list,word_list,total,letter)
+    return reveal
+    
+def check_and_remove_letter(check_list, word_list, total, letter):
+    for each in range(0, total):
+        count = 0
+        if check_list[each] == letter:
+            board[each] = letter
+            count +=1
+            word_list.remove(letter)
 
+def replay():
+    print("Want to play again (y/n)?")
+    replay = input()
+    if replay == "y" or replay == "Y":
+        logic()
+    else:
+        print("Byee.")
+    return
+    
+def logic():
+    lives = 3
+    chosen = random.choice(words)
+    check_list= list(chosen)
+    word_list = list(chosen)
+    total = len(chosen)
+    setup_board(total)
+    if total <= 5 :
+            wordshow(check_list,word_list, chosen, total)
+    else:
+        past_index = wordshow(check_list, word_list, chosen, total)
+        wordshow(check_list, word_list, chosen, total, past_index)
+    while lives != 0:
+        show_board(board)
+        print(" ", end = "\n")
+        print("Guess a letter ")
+        guess = input("")
+        if guess.lower() in word_list:
+            check_and_remove_letter(check_list, word_list, total, guess.lower())
+            print("Correct guess!")
+        else:
+            lives -= 1
+            print("Wrong.One life deducted")
+        if word_list == []:
+            print("You won! You're saved")
+            replay()
+            return
+        else:
+            print("You have" , lives , "lives left.")
+    print("Game over.You are now dead!")
+    replay()
+    return
+
+
+
+if __name__ == "__main__":
+    logic()
