@@ -1,6 +1,6 @@
 # <center> Hacktober Fest 2022 </center>
 
-![Hacktoberfest 2021](hacktoberfest2021.PNG)
+![Hacktoberfest 2022](hacktoberfest2022.PNG)
 
 <p align="center">
    <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/MohmedIkram/hacktoberfest2021"></a>
@@ -18,9 +18,7 @@ Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easil
 
 ## Steps to follow:
 
-### 1. Register for Hacktoberfest
-
-##### https://hacktoberfest.digitalocean.com/
+### 1. [Register for Hacktoberfest](https://hacktoberfest.com)
 
 ### 2. Add a Program in any Language you like:
 
