@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dom Navigation</title>
+</head>
+<body>
+<ul id="list">
+	<li>Orange</li>
+	<li id="abc">Mango</li>
+	<li>grapes</li>
+	<li>Banana</li>
+</ul>
+
+<ul id="list1">
+	<li>Orange</li>
+	<li>Reddish</li>
+</ul>
+
+<script type="text/javascript">
+var element = document.createElement("li");
+var newText =document.createTextNode("Wow new text");
+
+element.appendChild(newText);
+
+var target = document.getElementById("list");
+var oldElement = target.children[0];
+console.log(oldElement);
+
+target.replaceChild(element, oldElement);
+
+var target1 = document.getElementById("list").children[1];
+var copyElement = target1.cloneNode(true);
+
+document.getElementById("list1").appendChild(copyElement);
+
+
+console.log(copyElement);
+
+//contains
+
+var parentElement = document.getElementById("list");
+var target = document.getElementById("abc");
+var find = parentElement.contains(target);
+console.log(find);
+
+var target3 = document.getElementById("list");
+var find1 = target3.hasAttribute("class");
+console.log(find1);
+
+var target4 = document.getElementById("list").firstElementChild;
+var target5 = document.getElementById("list1").children[1];
+
+var equal = target4.isEqualNode(target5);
+
+console.log(equal);
+
+</script>
+</body>
+</html>
