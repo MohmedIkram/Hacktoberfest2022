@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome Links  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Document</title>
+
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.Hero{
+  width: 100%;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1{
+  height: 48px;
+  margin: 50px;
+}
+
+.social-links{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-links a{
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+  margin: 0 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: auto;
+  transition: transform 0.5s;
+  margin: 15px 10px;
+}
+
+.social-links a .fa{
+  font-size: 30px;
+  line-height: 80px;
+  position: relative;
+  z-index: 12;
+  transition: color 0.5s;
+}
+
+.social-links a::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg,#ed1c94,#ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-links a:hover::after{
+  top: 0;
+}
+
+.social-links a:hover .fa{
+  color: #fff;
+}
+
+.social-links a:hover{
+  transform: translateY(-10px);
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="Hero">
+    <h1>Social Icons Hover Effects</h1>
+    <div class="social-links">
+      <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
+      <a href="www.google.com"><i class="	fa fa-google"></i></a>
+      <a href="www.linkedin.com"><i class="	fa fa-linkedin"></i></a>
+      <a href="www.snapchat.com"><i class="	fa fa-snapchat"></i></a>
+      <a href="www.whatsapp.com"><i class="	fa fa-whatsapp"></i></a>
+    </div>
+  </div>
+</body>
+
+</html>
