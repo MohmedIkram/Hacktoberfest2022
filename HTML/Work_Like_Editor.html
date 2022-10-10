@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word</title>
+</head>
+<body>
+        <div class="container text-center d-block">
+            <h1 class="text-center m-2">Word like editor</h1>
+            <button class="btn btn-primary m-2 p-2" onclick="document.querySelector('textarea').style.fontWeight = 'Bold';"><i class="fas fa-bold"></i></button>
+            <button onclick="document.querySelector('textarea').style.fontStyle = 'Italic';" class="btn btn-primary m-2 p-2"><i class="fas fa-italic"></i></button>
+            <button class="btn btn-primary m-2 p-2" onclick="document.querySelector('textarea').style.textAlign = 'Left';"><i class="fas fa-align-left"></i></button>
+            <button onclick="document.querySelector('textarea').style.textAlign = 'Center';" class="btn btn-primary m-2 p-2"><i class="fas fa-align-center"></i></button>
+            <button onclick="document.querySelector('textarea').style.textAlign = 'Right';" class="btn btn-primary m-2 p-2"><i class="fas fa-align-right"></i></button>
+            <button class="btn btn-primary m-2 p-2" onclick="document.querySelector('textarea').value = '';document.querySelector('textarea').style = 'None';"><i class="fas fa-trash"></i></button>
+            <button class="btn btn-primary m-2 p-2" onclick="document.querySelector('textarea').value = document.querySelector('textarea').value.toUpperCase();">Upper Case</button>
+            <button class="btn btn-primary m-2 p-2" onclick="document.querySelector('textarea').value = document.querySelector('textarea').value.toLowerCase()">Lower Case</button>
+            <button class="btn btn-primary m-2 p-2" onclick="cap()">Capitalize</button>
+        </div>
+        <div class="container-fluid text-center d-block">
+            <textarea spellcheck="on" style="outline: none; font-size:25px;" class="mt-3 border-0 border-primary text-dark" autofocus="on" name="data" id="data" cols="100%" rows="100%" placeholder="Start typing..."></textarea>
+        </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript"> 
+    function cap()
+    {
+        var arr = document.querySelector("textarea").value.split(' ');
+        for(let i = 0;i<arr.length;i++){
+            arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1);
+         };
+         document.querySelector("textarea").value = arr.join(' ');
+    }
+</script>
+</html>
