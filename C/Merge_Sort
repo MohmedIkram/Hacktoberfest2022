@@ -1,85 +1,58 @@
-// This is a program for merge sort algorithm.
+// This is a mergesort program, it takes user input of number and sort the numbers using merge sort algorithm.
+// The time complexity of this algorithm is order of n(logn).
 
-#include <stdio.h>  
-  
-/* Function to merge the subarrays of a[] */  
-void merge(int a[], int beg, int mid, int end)    
-{    
-    int i, j, k;  
-    int n1 = mid - beg + 1;    
-    int n2 = end - mid;    
-      
-    int LeftArray[n1], RightArray[n2]; //temporary arrays  
-      
-    /* copy data to temp arrays */  
-    for (int i = 0; i < n1; i++)    
-    LeftArray[i] = a[beg + i];    
-    for (int j = 0; j < n2; j++)    
-    RightArray[j] = a[mid + 1 + j];    
-      
-    i = 0; /* initial index of first sub-array */  
-    j = 0; /* initial index of second sub-array */   
-    k = beg;  /* initial index of merged sub-array */  
-      
-    while (i < n1 && j < n2)    
-    {    
-        if(LeftArray[i] <= RightArray[j])    
-        {    
-            a[k] = LeftArray[i];    
-            i++;    
-        }    
-        else    
-        {    
-            a[k] = RightArray[j];    
-            j++;    
-        }    
-        k++;    
-    }    
-    while (i<n1)    
-    {    
-        a[k] = LeftArray[i];    
-        i++;    
-        k++;    
-    }    
-      
-    while (j<n2)    
-    {    
-        a[k] = RightArray[j];    
-        j++;    
-        k++;    
-    }    
-}    
-  
-void mergeSort(int a[], int beg, int end)  
-{  
-    if (beg < end)   
-    {  
-        int mid = (beg + end) / 2;  
-        mergeSort(a, beg, mid);  
-        mergeSort(a, mid + 1, end);  
-        merge(a, beg, mid, end);  
-    }  
-}  
-  
-/* Function to print the array */  
-void printArray(int a[], int n)  
-{  
-    int i;  
-    for (i = 0; i < n; i++)  
-        printf("%d ", a[i]);  
-    printf("\n");  
-}  
-  
-int main()  
-{  
-    int a[] = { 12, 31, 25, 8, 32, 17, 40, 42 };  
-    int n = sizeof(a) / sizeof(a[0]);  
-    printf("Before sorting array elements are - \n");  
-    printArray(a, n);  
-    mergeSort(a, 0, n - 1);  
-    printf("After sorting array elements are - \n");  
-    printArray(a, n);  
-    return 0;  
-}  
 
-// End of the program
+#include <stdio.h>
+
+void mergesort(int a[], int i, int j);
+void merge(int a[], int i1, int j1, int i2, int j2);
+
+int main()
+{
+    int a[30], n, i;
+    printf("Enter no of elements:");
+    scanf("%d", &n);
+    printf("Enter array elements:");
+    for (i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+    mergesort(a, 0, n - 1);
+    printf("\nSorted array is :");
+    for (i = 0; i < n; i++)
+        printf("%d ", a[i]);
+    return 0;
+}
+
+void mergesort(int a[], int i, int j)
+{
+    int mid;
+    if (i < j)
+    {
+        mid = (i + j) / 2;
+        mergesort(a, i, mid);         
+        mergesort(a, mid + 1, j);     
+        merge(a, i, mid, mid + 1, j); 
+    }
+}
+
+void merge(int a[], int i1, int j1, int i2, int j2)
+{
+    int temp[50]; 
+    int i, j, k;
+    i = i1; 
+    j = i2; 
+    k = 0;
+    while (i <= j1 && j <= j2) 
+    {
+        if (a[i] < a[j])
+            temp[k++] = a[i++];
+        else
+            temp[k++] = a[j++];
+    }
+    while (i <= j1) 
+        temp[k++] = a[i++];
+    while (j <= j2) 
+        temp[k++] = a[j++];
+
+    for (i = i1, j = 0; i <= j2; i++, j++)
+        a[i] = temp[j];
+}
