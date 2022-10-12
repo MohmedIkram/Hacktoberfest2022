@@ -1,0 +1,48 @@
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="game.css" />
+    </head>
+    <body>
+      <div class="display">
+        <div class="left">
+          <div class="score"></div>
+          <div class="gameover">
+            <div class="over">
+                <div class="choice">
+                  <div id="gameover">GAME OVER</div><br>
+                <button id="playagain" onclick="location.reload();">
+                  play again
+                </button>
+                <button id="menu" onclick="location='index.html'">
+                  Main Menu
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="container">
+          <div class="snakeface" id="snakebody0"></div>
+        </div>
+        <div class="level"></div>
+      </div>
+
+      <script src="game.js"></script>
+    </body>
+  </html>
+
+  <!-- <div class="container" id="container">
+    <div class="snakeface" id="snakebody0"></div>
+</div>
+<div class="score"></div>
+<div class="level"></div>
+<div class="gameover">
+    <span id="gameover">GAME OVER</span><br><br><br><br><br><br><br>
+    <button id="playagain" onclick="location.reload();">play again</button>
+    <button id="menu" onclick="location='index.html'">Main Menu</button>
+</div> -->
+</html>

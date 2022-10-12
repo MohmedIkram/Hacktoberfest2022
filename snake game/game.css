@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+body{
+    margin:0;
+    padding:0;
+    background-image: url(bg.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+.display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    font-family: 'Otomanopee One', sans-serif;
+    font-size:34px;
+    position: absolute;
+    top:100px;
+    left:95px;
+}
+.level{
+    font-family: 'Otomanopee One', sans-serif;
+    font-size:34px;
+    position: absolute;
+    top:100px;
+    right:65px;
+}
+.container{
+    background-color:blueviolet;
+    height:450px;
+    width:450px;
+    border:2px solid black;
+    border-radius:5px;
+    position:absolute;
+    left:30%;
+    top:10%;
+}
+.container div{
+    position: absolute;
+}
+.food{
+    background-color:chocolate;
+    position:absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 6px;
+}
+.snakeface{
+    background-color:greenyellow;
+    border:1px solid green;
+    width:45px;
+    height:45px;
+    border-radius:6px;
+    display:absolute;
+}
+.snakebody{
+    background-color:green;
+    border:1px solid greenyellow;
+    width:45px;
+    height:45px;
+    border-radius:6px;
+    display:absolute;
+}
+.gameover{
+    background-color: red;
+    border-radius: 10px;
+    height: 40%;
+    width: 25%;
+    position: absolute;
+    left: 2%;
+    top: 35%;
+    border:2px solid yellow;
+    display:none;
+    /* position:relative; */
+}
+.over{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#gameover{
+    text-align: center;
+    font-size: larger;
+}
+/* #gameover{
+    color:white;
+    font-size: 50px;
+    position:absolute;
+    left:10px;
+    top:30px;
+    font-family: 'Otomanopee One', sans-serif;
+} */
+#menu{
+    position: absolute;
+    right: 45px;
+    height: 45px;
+    width: 99px;
+    border-radius:10px;
+    font-size: 16px;
+}
+#playagain{
+    position: absolute;
+    left: 45px;
+    height: 45px;
+    width: 99px;
+    border-radius:10px;
+    font-size: 16px;
+}
+#menu:hover,#playagain:hover{
+    cursor:pointer;
+    border:2px solid blue;
+}
+
