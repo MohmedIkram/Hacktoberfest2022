@@ -11,9 +11,12 @@ businessNews.addEventListener("click", getBusinessNews);
 techNews.addEventListener("click", getTechNews);
 WSJNews.addEventListener("click", getWSJNews);
 
+//API
+let apiKey1 = API_TOKEN_HERE;
+let apiKey2 = API_TOKEN_HERE;
+
 //News Section
 function getBusinessNews() {
-	let apiKey1 = "c064d2536a8c48aaaf726544892cd00d";
 	fetch(
 		"https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=" +
 			apiKey1,
@@ -44,9 +47,8 @@ function getBusinessNews() {
 }
 
 function getTechNews() {
-	let apiKey1 = "c064d2536a8c48aaaf726544892cd00d";
 	fetch(
-		"https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=" + apiKey1,
+		"https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=" + apiKey2,
 		{
 			headers: {
 				Accept: "application/json",
