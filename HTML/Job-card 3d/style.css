@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(75deg, #2980b9, #8e44ad);
+    font-family: Arial;
+}
+
+.profile {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    margin-top: 50px;
+}
+
+.name {
+    font-size: 30px;
+    padding-top: 75px;
+    font-family: Arial;
+}
+
+.tag {
+    padding: 5px 0;
+}
+
+.about {
+    margin-top: 10px;
+    padding: 0px 35px;
+    font-size: 15px;
+}
+
+h1 {
+    color: #0d0d0d;
+}
+
+p {
+    padding: 20px;
+    color: #262626;
+    text-align: justify;
+}
+
+i {
+    font-size: 25px;
+    padding-left: 20px;
+    cursor: poniter;
+}
+
+i.fa-facebook-squre {
+    padding-left: 0;
+    color: #4267b2
+}
+
+i.fa-twitter-squre {
+    background-color: #38A1F3
+}
+
+i.fa-instagram {
+    color: #d72888
+}
+
+i.fa-youtube {
+    color: #eb1c14
+}
+
+i.fa-linkedin {
+    color: #0077B5
+}
+
+.back-face {
+    transform: perspective(800px) rotateY(-180deg);
+}
+
+.front-face {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.container:hover>.back-face {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.container:hover>.front-face {
+    transform: perspective(800px) rotateY(180deg);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 430px;
+    width: 350px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ebf8f9;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    border: 0 2px 3px rgba(0, 0, 0, .2);
+    transition: transform .5s linear;
+}
+
+.cover {
+    background: linear-gradient(75deg, #8e44ad, #2980b9);
+    height: 115px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
