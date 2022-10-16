@@ -1,5 +1,6 @@
 # Getting Started with Create React App
-
+Created by Kumar Ashish Ranjan.
+Live Website link : https://pwa-weatherapp144.netlify.app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
