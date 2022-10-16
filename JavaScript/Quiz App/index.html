@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Quiz</title>
+</head>
+<body>
+    
+    
+        <header>
+            <h1>PHYSICS Quiz</h1>
+            <div class="score-card none">
+                <div class="score">
+                    <p>You are <span>0%</span> physicist </p>
+                </div>
+            </div>
+            <div class="start-again">
+                <input type="submit" value="Click Me to Start Again" id="restart" class="none">
+                <input type="submit" value="Click Me to See Answers" id="answer" class="none">
+            </div>
+            <div class="timer">
+                
+            </div>
+        </header>
+        <main>
+            <h3 class="buddy">Lets Attack on the Questions Buddy !!</h3>
+            <button id="see">Click To see the Questions</button>
+            <form class="questions">
+                <div class="question">
+                    <p>Q1. What is the Unit and Dimension of Force</p>
+                    <div class="options options1">
+                        <!-- <div class="first-half"> -->
+                        <div class="option1">
+                            <input type="radio" name="q1" value="A">
+                            <label id="q1a">Newton, MLT<sup>-2</sup></label>
+                        </div>
+                    
+                        <div class="option2">
+                            <input type="radio" name="q1" value="B">
+                            <label>Dynes, MLT<sup>-1</sup></label>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="second-half"> -->
+                        <div class="option3">
+                            <input type="radio" name="q1" value="C">
+                            <label>Newton, MLT<sup>-3</sup></label>
+                        </div>
+
+                        <div class="option4">
+                            <input type="radio" name="q1" value="D">
+                            <label>Dynes, MLT<sup>-3</sup></label>
+                        <!-- </div> -->
+                    </div>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>Q2. What can be said about the displacement of the body if it covers a distance of zero?</p>
+                    <div class="options options2">
+                        <!-- <div class="first-half"> -->
+                        <div class="option1">
+                            <input type="radio" name="q2" value="A">
+                            <label>It may or may not be zero</label>
+                        </div>
+                    
+                        <div class="option2">
+                            <input type="radio" name="q2" value="B">
+                            <label>It cannot be zero</label>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="second-half"> -->
+                        <div class="option3">
+                            <input type="radio" name="q2" value="C">
+                            <label id="q2a">It is zero</label>
+                        </div>
+
+                        <div class="option4">
+                            <input type="radio" name="q2" value="D">
+                            <label>It is negative</label>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="question">
+                    <p>Q3.  An athlete finishes a round of circular track of radius R in 40 sec. What is his displacement at the end of 2 min 20 sec?</p>
+                    <div class="options options3">
+                        <!-- <div class="first-half"> -->
+                        <div class="option1">
+                            <input type="radio" name="q3" value="A">
+                            <label>2πR</label>
+                        </div>
+                    
+                        <div class="option2">
+                            <input type="radio" name="q3" value="B">
+                            <label id="q3a">2R</label>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="second-half"> -->
+                        <div class="option3">
+                            <input type="radio" name="q3" value="C">
+                            <label>7πR</label>
+                        </div>
+
+                        <div class="option4">
+                            <input type="radio" name="q3" value="D">
+                            <label>Zero</label>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="question">
+                    <p>Q4. Which of the following remains constant if a body travels with constant acceleration?</p>
+                    <div class="options options4">
+                        <div class="first-half">
+                        <div class="option1">
+                            <input type="radio" name="q4" value="A">
+                            <label>Time</label>
+                        </div>
+                    
+                        <div class="option2">
+                            <input type="radio" name="q4" value="B">
+                            <label>Velocity</label>
+                        </div>
+                        </div>
+                        <div class="second-half">
+                        <div class="option3">
+                            <input type="radio" name="q4" value="C">
+                            <label>Displacement</label>
+                        </div>
+
+                        <div class="option4">
+                            <input type="radio" name="q4" value="D">
+                            <label id="q4a">None of the above</label>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Lets Check ;)" id="btn">
+                <button class="btn5">50-50</button>
+                <button class="close none">Close the Quiz</button>
+            </form>
+        </main>
+        <footer>
+            <!-- <audio src="./FADE.wav" id="sound"></audio> -->
+            <marquee>Made and Programmed by HARSH SUKHIJA</marquee>
+        </footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
