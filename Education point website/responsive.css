@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1300px){ 
+
+    .navlist{
+        flex-direction: column;
+        width: 70%;
+    }
+    .navbar{
+        flex-direction: column;
+        transition: all 0.5s ease-out;
+        height: 478px;
+    }
+    .rightnav{
+        text-align: center;
+        width: 30%;
+    }
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    #search{
+        width: 80%; 
+    }
+    .burger{
+        display: block;
+    }
+    .h-class-resp{
+        height: 72px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+    .section{
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .text-small{
+        text-align: center;
+    }
+    .text-big{
+        text-align: center;
+    }
+    .buttons{
+        text-align: center;
+    
+
+    }
+    .paras{
+        padding: 0;
+        text-align: center;
+    }
+    .secondhalf img{
+        width: 40%;
+    }
+    .logo{
+        width: 40%;
+    }
+
+} 
+    
