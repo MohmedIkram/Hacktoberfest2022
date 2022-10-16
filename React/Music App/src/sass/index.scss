@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@500&family=Festive&family=Inter&family=Lobster+Two:wght@400;700&family=Montserrat&family=Roboto+Mono&family=Sirin+Stencil&family=Splash&family=Stylish&family=Supermercado+One&family=Titillium+Web&family=Ubuntu:wght@300;500;700&display=swap');
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+::-webkit-scrollbar-track{
+    background: rgb(32, 37, 41);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(50, 58, 64);
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover{
+        background: rgb(68, 79, 87);
+    }
+}
+
+@mixin flexCenter {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+}
+.App{
+    color: orange;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    min-height: 100vh;
+    width: 100vw;
+    // overflow-x: hidden;
+    background: radial-gradient(circle at top, rgb(0, 0, 0),rgb(32, 37, 41));
+    @include flexCenter;
+    align-items: flex-start !important;
+    flex-direction: column;
+
+    .header{
+        background: rgb(50, 58, 64);
+        width: 100%;
+        margin-bottom: 1rem;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        text-align: center;
+        padding: 1rem;
+        color: orange;
+    }
+    h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+        color: orange;
+    }
+
+    .trendingSection{
+        width: 100vw;
+        height: 28rem;
+        @include flexCenter;
+        flex-direction: column;
+        overflow-x: scroll !important;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        .card{
+            padding:1rem;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+            @include flexCenter;
+            flex-direction: column;
+            background: rgb(50, 58, 64);
+            border: 1px solid rgb(50, 58, 64);
+            width:20rem;
+            // cursor: pointer;
+
+            &:hover{
+                border: 1px solid rgb(145, 168, 184);
+                background: rgb(61, 71, 78);
+            }
+
+            h3{
+                color:white;
+            }
+            p{
+                font-size: 0.7rem;
+            }
+            img{
+                height: 15rem;
+                width: 20rem;
+                margin: 0.5rem 0;
+            }
+            .tab{
+                @include flexCenter;
+                justify-content:space-between !important;
+                width: 100%;
+            }
+            audio{
+                margin-top: 1rem;
+                width: 285px;
+                height: 32px;
+                color: rgb(68, 79, 87);
+                mix-blend-mode: difference;
+            }
+        }
+
+    }
+    .releasedSection{
+        @extend .trendingSection;
+        height: 56rem !important;
+    }
+    .artistSection{
+        @extend .trendingSection;
+        height: 23rem !important;
+    }
+    .footer{
+        margin-top: 1rem;
+        width: 100%;
+        @include flexCenter;
+        padding: 1rem 0.5rem;
+        background: rgb(50, 58, 64);
+        p{
+            margin-right: 0.2rem;
+        }
+        a{
+            text-decoration: none;
+            margin-left: 0.2rem;
+            color: orange;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .card{
+        width: 15rem;
+
+        img{
+            height: 10rem;
+            width: 15rem;
+        }
+    }
+}
