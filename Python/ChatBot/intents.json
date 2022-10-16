@@ -1,0 +1,64 @@
+{
+  "intents":
+  [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "context_set": ""
+        },
+        {"tag": "age",
+         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
+         "responses": ["I am 18 years old!", "18 years young!"],
+         "context_set": ""
+        },
+        {"tag": "name",
+         "patterns": ["what is your name", "what should I call you", "whats your name?"],
+         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+         "context_set": ""
+        },
+        {"tag": "shop",
+         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
+         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+         "context_set": ""
+        },
+        {"tag": "hours",
+         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
+         "responses": ["We are open 7am-4pm Monday-Friday!"],
+         "context_set": ""
+        },
+        { "tag": "stocks",
+          "patterns": ["What stocks do I own?","how are my shares?","what companies am I investing in?","what am I doing in the markets?"],
+          "response":["You Own the following shares : ABBV, AAPL, FB, NVDA and an ETF of the S&P 500 Index!"]
+        },
+        { "tag": "options",
+          "patterns": ["How you could help me?","What you can do?","What help you provide?","What support is offered","Help"],
+          "responses": ["I can help you get some data like stock price or timeseries.I can also provide some API details such as TREP API ad some Eikon Data API and provide link to download API","Offering mainly support for TREP and Elektron SDK API. Anyway I know a little bit about Eikon Data API and can help you check some price"]
+        },
+        { "tag": "trepapidownload",
+          "patterns": ["How to downoad RFA API?","How to downoad RFA C++ API?","How to downoad RFA Java API?","How to download Open DACS API","Give me a list of TREP API","download RFA C++","download RFA Java","download RFA.NET","List REP API"],
+          "responses": ["Navigate to API of your choice from developer portal https://developers.refinitiv.com/thomson-reuters-enterprise-platform/apis-in-this-family, there is download section in each API.Note that only RDC named user can access the page."]
+        },
+        { "tag": "get_data",
+          "patterns": ["I want to retrieve data","get data","get stock data","Can you retreive data?","Can you help me get data?","Any way to get data."],
+          "responses": ["I can retreive some of the timeseries data (limit to 30 days) or snapshot of stock price.\nDo you need timeseries or price?","Do you want to retreive timeseries (limit to 30 days) or price?"]
+        },
+        { "tag": "gettimeseries",
+          "patterns": ["I want to get timeseries","I want to get timeseries data", "I want to retreive timeseries","I want to retrieve timeseries data", "historical data","timeseries data","get timeseries data", "get historical data","retreive historical data"],
+          "responses": ["Please provide RIC name", "Can you provide RIC name"]
+        },
+        { "tag": "getsnapshot",
+          "patterns": ["I want to get price","Can I get price","Can I get stock price","Can you help me get stock price","get latest price","retreive snapshot data","retrieve stock price","retrieve latest price"],
+          "responses": ["Please provide RIC name","Can you provide RIC name"]
+        },
+        {
+         "tag": "ric_confirmed",
+         "patterns": [],
+         "responses": ["Let me check, please wait.","Ok, Let me check.","Roger that! Wait for a second."]
+        }
+   ]
+}
