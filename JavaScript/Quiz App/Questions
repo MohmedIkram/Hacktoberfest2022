@@ -1,0 +1,71 @@
+<div class="options">
+    <div class="first-half">
+               
+        <div class="option2">
+            <input type="radio" name="q2" value="B">
+            <label>It cannot be zero</label>
+        </div>
+    </div>
+    <div class="second-half">
+        <div class="option3">
+            <input type="radio" name="q2" value="C">
+            <label class="correct1">It is zero</label>
+        
+        </div>
+    </div>
+</div>
+
+<div class="options options1">
+    <div class="first-half">
+        <div class="option1">
+            <input type="radio" name="q1" value="A">
+            <label class="correct1">Newton, MLT<sup>-2</sup></label>
+        </div>
+                
+         
+    </div>
+    <div class="second-half">
+        <div class="option3">
+            <input type="radio" name="q1" value="C">
+            <label>Newton, MLT<sup>-3</sup></label>
+        </div>
+
+        
+    </div>
+</div>
+
+<div class="options options3">
+    <div class="first-half">
+                
+        <div class="option2">
+            <input type="radio" name="q3" value="B">
+            <label class="correct1">2R</label>
+        </div>
+    </div>
+    <div class="second-half">
+        
+        <div class="option4">
+            <input type="radio" name="q3" value="D">
+            <label>Zero</label>
+        </div>
+    </div>
+</div>
+
+<div class="options options4">
+    <div class="first-half">
+        
+                
+        <div class="option2">
+            <input type="radio" name="q4" value="B">
+            <label>Velocity</label>
+        </div>
+    </div>
+    <div class="second-half">
+        
+
+        <div class="option4">
+            <input type="radio" name="q4" value="D">
+            <label class="correct1">None of the above</label>
+        </div>
+    </div>
+</div>
