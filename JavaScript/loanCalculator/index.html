@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <style>
+        #loading, #results {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <div class="form-group pb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" step="any" class="form-control" id="amount" placeholder="Loan Amount">
+                            </div>
+                        </div>
+                        <div class="form-group pb-3">
+                            <div class="input-group">
+                                <span class="input-group-text">%</span>
+                                <input type="number" class="form-control" id="interest" placeholder="Interest">
+                            </div>
+                        </div>
+                        <div class="from-group pb-3">
+                            <input type="number" class="form-control" id="years" placeholder="Years to repay">
+                        </div>
+                        <div class="form-group pb-3 d-grid gap-2">
+                            <input type="submit" value="Calculate" class="btn btn-dark">
+                        </div>
+                    </form>
+                    <!-- LOADER -->
+                    <div id="loading">
+                        <img src="img/loading.gif" alt="" srcset="">
+                    </div>
+                    <!-- RESULTS -->
+                    <div class="pt-4" id="results">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group pb-3">
+                                <span class="input-group-text">Monthly Payment</span>
+                                <input type="number" id="monthly-payment" class="form-control" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group pb-3">
+                                <span class="input-group-text">Total Payment</span>
+                                <input type="number" id="total-payment" class="form-control" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group pb-3">
+                                <span class="input-group-text">Total Interest</span>
+                                <input type="number" id="total-interest" class="form-control" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
