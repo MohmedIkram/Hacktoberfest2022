@@ -75,5 +75,3 @@ int main() {
    display(arr, n);
 
 }
-Footer
-© 2022 GitHub, Inc.
