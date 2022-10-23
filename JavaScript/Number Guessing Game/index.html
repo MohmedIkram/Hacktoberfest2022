@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Number Guessing Game
+        </title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <!-- fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h3>I am thinking of a number between 1-10.</h3>
+            <h3>Can you guess it?</h3>
+            <input type="text" placeholder="Num" id="guess"><br>
+            <button onclick="play()" id="my_btn">Guess</button>
+
+            <p id="message1">No.of Guesses: 0</p>
+            <p id="message2">Guessed Numbers are: None</p>
+            <p id="message3"></p>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
