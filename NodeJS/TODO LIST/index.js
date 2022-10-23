@@ -12,7 +12,7 @@ app.set("views", "./views");
 app.use(express.static("./assets"));
 app.use(express.urlencoded());
 
-//routes
+//initialize routes
 app.use("/", route);
 
 //conecting to server
