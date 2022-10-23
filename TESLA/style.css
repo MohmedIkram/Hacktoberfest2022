@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-image: url('./img/model_s.png');
+    height: 100vh;
+    background-size: cover;
+    background-blend-mode: multiply;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-repeat: no-repeat;
+
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    flex: auto;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 15px 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: gray;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+    /* filter: invert(); */
+    margin-left: 30px;
+}
+.logo:hover{
+    filter: invert();
+}
+.btn{
+    margin-right: 30px;
+    border: 1px solid black;
+    padding: 2px 18px;
+    border-radius: 30px;
+}
+
+.model{
+    position: fixed;
+    top: 100px;
+    right: 300px;
+}
+.model h2{
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.info{
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: fixed;    
+    bottom: 50px;
+    margin-left: 230px;
+}
+.info div{
+    margin: 0 40px;
+}
+.info h2{
+    font-size: 40px;
+    font-weight: 600;
+}
