@@ -192,36 +192,36 @@ BinaryTreeNode<int>* removeLeafNodes(BinaryTreeNode<int>* root){
 }
 
 int main(){
-    // BinaryTreeNode<int>* root = new BinaryTreeNode<int>(1);
-    // BinaryTreeNode<int>* node1 = new BinaryTreeNode<int>(2);
-    // BinaryTreeNode<int>* node2 = new BinaryTreeNode<int>(3);
-    // root->left = node1;
-    // root->right = node2;
+    BinaryTreeNode<int>* root = new BinaryTreeNode<int>(1);
+    BinaryTreeNode<int>* node1 = new BinaryTreeNode<int>(2);
+    BinaryTreeNode<int>* node2 = new BinaryTreeNode<int>(3);
+    root->left = node1;
+    root->right = node2;
 
-    // BinaryTreeNode<int>* root = takeInput();
+    BinaryTreeNode<int>* root = takeInput();
 
     BinaryTreeNode<int>* root = takeInputLevelWise();
     // printTree(root);
 
     printTreeLevelOrder(root);
 
-    // int x = 3;
-    // cout<<"Node "<<x<<" is "<<(isNodePresent(root, x)?"":"not ")<<"present in the tree"<<endl;
+    int x = 3;
+    cout<<"Node "<<x<<" is "<<(isNodePresent(root, x)?"":"not ")<<"present in the tree"<<endl;
 
-    // mirror(root);
-    // printTreeLevelOrder(root);
+    mirror(root);
+    printTreeLevelOrder(root);
 
-    // cout<<endl<<"Preorder: ";
-    // preorderTraversal(root);
-    // cout<<endl<<"Postorder: ";
-    // postorderTraversal(root);
-    // cout<<endl<<"Inorder: ";
-    // inorderTraversal(root);
-    // cout<<endl;
+    cout<<endl<<"Preorder: ";
+    preorderTraversal(root);
+    cout<<endl<<"Postorder: ";
+    postorderTraversal(root);
+    cout<<endl<<"Inorder: ";
+    inorderTraversal(root);
+    cout<<endl;
 
-    // cout<<"Min: "<<getMinAndMax(root).first<<" "<<"Max: "<<getMinAndMax(root).second<<endl;
+    cout<<"Min: "<<getMinAndMax(root).first<<" "<<"Max: "<<getMinAndMax(root).second<<endl;
 
-    // cout<<sumOfNodes(root)<<endl;
+    cout<<sumOfNodes(root)<<endl;
 
     root = removeLeafNodes(root);
     cout<<"After - Remove leaf nodes: ";
