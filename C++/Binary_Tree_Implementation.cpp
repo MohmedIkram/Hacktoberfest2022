@@ -217,7 +217,6 @@ int main(){
     postorderTraversal(root);
     cout<<endl<<"Inorder: ";
     inorderTraversal(root);
-    cout<<endl;
 
     cout<<"Min: "<<getMinAndMax(root).first<<" "<<"Max: "<<getMinAndMax(root).second<<endl;
 
