@@ -1,41 +1,6 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Widget</title>
-</head>
-<body>
-    <main>
-        <section class="text">
-            <h1 id="user-text" class="text-field" contenteditable="true"></h1>
-        </section>
-        <section id="size" class="controle size">
-            <h2 class="controle-title">Size</h2>
-            <button class="size-btn" id="decrement" onclick="textSize(this)">D</button>
-            <button class="size-btn" id="increment" onclick="textSize(this)">I</button>
-        </section>
-        <section id="alignment" class="controle alignment">
-            <h2 class="controle-title">Align</h2>
-            <button id="left" onclick="textAlign(this)">L</button>
-            <button id="center" class="active" onclick="textAlign(this)">C</button>
-            <button id="right" onclick="textAlign(this)">R</button>
-        </section>
-        <section id="style" class="controle style">
-            <h2 class="controle-title">Style</h2>
-            <button class="style" id="bold" onclick="textStyle(this)">B</button>
-            <button class="style" id="italic" onclick="textStyle(this)">I</button>
-            <button class="style" id="underline" onclick="textStyle(this)">U</button>
-        </section>
-        <section id="font" class="controle font">
-            <h2 class="controle-title">Font</h2>
-            <input type="text" name="font" id="user-font" class="font--request" placeholder="Enter font name">
-        </section>
-    </main>
-</body>
-</html>
-
-<style>
+    <style>
     main {
         display: grid;
         height: calc(100vh - 2em);
@@ -146,6 +111,42 @@
         100% { background-color: hsl(0deg 0% 97%); }
     }
 </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Widget</title>
+</head>
+<body>
+    <main>
+        <section class="text">
+            <h1 id="user-text" class="text-field" contenteditable="true"></h1>
+        </section>
+        <section id="size" class="controle size">
+            <h2 class="controle-title">Size</h2>
+            <button class="size-btn" id="decrement" onclick="textSize(this)">D</button>
+            <button class="size-btn" id="increment" onclick="textSize(this)">I</button>
+        </section>
+        <section id="alignment" class="controle alignment">
+            <h2 class="controle-title">Align</h2>
+            <button id="left" onclick="textAlign(this)">L</button>
+            <button id="center" class="active" onclick="textAlign(this)">C</button>
+            <button id="right" onclick="textAlign(this)">R</button>
+        </section>
+        <section id="style" class="controle style">
+            <h2 class="controle-title">Style</h2>
+            <button class="style" id="bold" onclick="textStyle(this)">B</button>
+            <button class="style" id="italic" onclick="textStyle(this)">I</button>
+            <button class="style" id="underline" onclick="textStyle(this)">U</button>
+        </section>
+        <section id="font" class="controle font">
+            <h2 class="controle-title">Font</h2>
+            <input type="text" name="font" id="user-font" class="font--request" placeholder="Enter font name">
+        </section>
+    </main>
+</body>
+</html>
+
+
 
 <script>
     const user_text = document.getElementById("user-text");
