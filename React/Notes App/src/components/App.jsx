@@ -45,13 +45,13 @@ function App() {
             title={note.title}
             content={note.content}
             delete={deleteNote}
-          />
-          
+          />);
+          }
         );
-      })}
+      }
       </div>
     </div>
   );
-}
+};
 
 export default App;
