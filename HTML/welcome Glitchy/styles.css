@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@800&display=swap");
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #3a0ca3;
+}
+
+.text {
+  font-size: clamp(4em, 20vmin, 15em);
+  color: #fee440;
+  position: relative;
+  font-family: "Stick No Bills", sans-serif;
+}
+
+.text:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -3px;
+  text-shadow: -3px -3px 0px #9b5de5;
+  animation: anime;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.text:after {
+  content: attr(data-text);
+  position: absolute;
+  text-shadow: 3px 5px 0px #00f5d4;
+  left: -2px;
+  animation: anime2;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anime {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  25% {
+    clip-path: polygon(0 65%, 100% 65%, 100% 96%, 0 96%);
+  }
+  50% {
+    clip-path: polygon(0 25%, 100% 25%, 100% 90%, 0 90%);
+  }
+  75% {
+    clip-path: polygon(0 25%, 100% 25%, 100% 69%, 0 69%);
+  }
+  100% {
+    clip-path: polygon(0 36%, 100% 36%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes anime2 {
+  0% {
+    top: -3px;
+    left: -2px;
+    clip-path: polygon(0 36%, 100% 36%, 100% 100%, 0% 100%);
+  }
+  25% {
+    top: -1px;
+    left: -4px;
+    clip-path: polygon(0 25%, 100% 25%, 100% 69%, 0 69%);
+  }
+  50% {
+    left: -1px;
+    clip-path: polygon(0 25%, 100% 25%, 100% 90%, 0 90%);
+  }
+  75% {
+    top: 1px;
+    left: 1px;
+    clip-path: polygon(0 65%, 100% 65%, 100% 96%, 0 96%);
+  }
+  100% {
+    top: -3px;
+    left: -2px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
