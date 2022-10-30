@@ -1,0 +1,25 @@
+/* The animation code */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+
+/* The element to apply the animation to */
+.text {
+    color: blue;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.text:hover {
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+.image {
+    width: 50%;
+    height: auto;
+}
