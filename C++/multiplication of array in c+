@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int Ra,Ca,Rb,Cb,a[100][100],b[100][100],c[100][100],i,j,k;                 //can change the size of the array as required (by default 100)
+    cout<<"Enter the number of row and column of  matrix a: ";
+    cin>>Ra>>Ca;
+    cout<<"Enter the number of row and column of  matrix b: ";
+    cin>>Rb>>Cb;
+   
+    cout<<"\nEnter the element of 1st matrix :"<<endl;
+    //sorting element of 1st martix entered
+    for(i=0; i<Ra; ++i)
+    {
+        for(j=0; j<Ca; ++j)
+        {
+            cout<<"Element a"<<i+1<<j+1<<" : ";
+            cin>>a[i][j];
+        }
+    }
+     cout<<"\nEnter the element of 2nd matrix :"<<endl;
+    //sorting element of 2nd martix entered
+    for(i=0; i<Rb; ++i)
+    {
+        for(j=0; j<Cb; ++j)
+        {
+            cout<<"Element b"<<i+1<<j+1<<" : ";
+            cin>>b[i][j];
+        }
+    }
+    
+    // multiplication criteria : coulmn of a = row of b
+    if(Ca == Rb)
+    {
+       for(i=0; i<Ra; i++)
+    {
+        for(j=0; j<Cb; j++)
+        { 
+            int s=0;
+            for(k=0; k<Ca; k++)
+            {
+                s = s + a[i][k] * b[k][j];
+                c[i][j] = s;
+            }
+        }}}
+    else{
+        cout<<"Wrong input!";
+    } 
+    
+    //display multiplication
+    cout<<"\nMultiplication of matrices :"<<endl;
+    for(i=0; i<Ra; ++i)
+    {
+        for(j=0; j<Cb; ++j)
+            {
+             cout<<c[i][j]<<" ";
+             if(j == Cb-1){
+                cout<<endl;
+            }
+        }
+    }
+    return 0;
+}
