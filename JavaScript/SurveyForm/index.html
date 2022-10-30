@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      form {
+        background-color: #e5e5e5;
+        border: 2px solid #d4d4d8;
+      }
+      input {
+        border: 2px solid #d4d4d8;
+      }
+
+      label {
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="form-container mx-auto my-0 w-5/6 md:w-1/3">
+      <form id="form" class="flex flex-col border-2 rounded p-4 my-8">
+        <h1 class="font-semibold text-center mb-2">User Details Form</h1>
+        <label for="name">Name<span class="text-red-500">*</span></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter name"
+          autocomplete="name"
+          name="name"
+          class="rounded p-2 mt-2 outline-none focus:border-blue-500"
+        />
+        <div class="errors mb-4 mx-1 text-red-500"></div>
+        <label for="email">Email<span class="text-red-500">*</span></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter email"
+          name="email"
+          autocomplete="email"
+          class="rounded p-2 mt-2 outline-none focus:border-blue-500"
+        />
+        <div class="errors mb-4 mx-1 text-red-500"></div>
+
+        <label for="password"
+          >Password<span class="text-red-500">*</span></label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+          placeholder="Enter password"
+          class="rounded p-2 mt-2 outline-none focus:border-blue-500"
+        />
+        <div class="errors mb-4 mx-1 text-red-500"></div>
+        <label for="date-of-birth"
+          >Date Of Birth<span class="text-red-500">*</span></label
+        >
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          autocomplete="bday"
+          class="rounded p-2 mt-2 outline-none focus:border-blue-500"
+        />
+        <div class="errors mb-4 mx-1 text-red-500"></div>
+        <br />
+        <div class="checkbox-container">
+          <input
+            type="checkbox"
+            id="accept"
+            name="check"
+            autocomplete="on"
+            class="rounded p-2 check-lg mt-2 outline-none focus:border-blue-500"
+          />
+          <label for="accept">Accept Terms and Conditions</label>
+          <div class="errors mb-4 mx-1 text-red-500"></div>
+        </div>
+        <div class="buttons-container">
+          <button
+            type="submit"
+            id="submit"
+            class="bg-blue-500 hover:bg-blue-700 w-20 py-2 my-2 text-white transition ease-in-out delay-150 duration-300"
+            name="submit"
+          >
+            Submit
+          </button>
+          <button
+            type="reset"
+            id="clear"
+            class="bg-gray-500 hover:bg-gray-600 mx-4 text-white w-20 py-2 my-2 transition ease-in-out delay-150 duration-300"
+            name="clear"
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="text-center w-4/5 md:w-1/2 mx-auto mb-8">
+      <table class="">
+        <thead class="text-center">
+          <th class="text-light w-1/4">Name</th>
+          <th class="text-light w-1/4">Email</th>
+          <th class="text-light w-1/4">D. O. B</th>
+          <th class="text-light w-1/4">Accepted Terms</th>
+          <th class="text-light w-1/4"></th>
+        </thead>
+        <tbody id="userDetails"></tbody>
+      </table>
+    </section>
+  </body>
+
+  <script src="main.js"></script>
+</html>
