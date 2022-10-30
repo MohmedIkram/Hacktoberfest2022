@@ -12,9 +12,9 @@ body {
 }
 
 .clock-container {
-    width: 15rem;
-    height: 15rem;
-    border: 15px solid black;
+    width: 16rem;
+    height: 14rem;
+    border: 16px solid black;
     box-shadow: 0px 0px 50px lightgrey;
     border-radius: 50%;
     position: relative;
