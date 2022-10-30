@@ -1,28 +1,35 @@
 #include <iostream>
 using namespace std;
 
-void sort(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < size - i - 1; j++)
-        {
-            if (arr[j] > arr[j + 1])
-                swap(arr[j + 1], arr[j]);
-        }
+void bubbleSort(int array[], int size) {
+  
+  for (int step = 0; step < size; ++step) {
+      
+    for (int i = 0; i < size - step; ++i) {
+
+      if (array[i] > array[i + 1]) {
+        int temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
+      }
     }
+  }
 }
 
-void printArray(int arr[], int size)
-{
-    for (int i = 0; i < size; i++)
-        cout << arr[i] << " ";
+void printArray(int array[], int size) {
+  for (int i = 0; i < size; ++i) {
+    cout << "  " << array[i];
+  }
+  cout << "\n";
 }
 
-int main()
-{
-    int a[] = {3, 1, 5, 2, 6};
-    int size = sizeof(a) / sizeof(a[0]);
-    sort(a, size);
-    printArray(a, size);
+int main() {
+  int data[] = {-2, 45, 0, 11, -9};
+
+  int size = sizeof(data) / sizeof(data[0]);
+  
+  bubbleSort(data, size);
+  
+  cout << "Sorted Array in Ascending Order:\n";  
+  printArray(data, size);
 }
