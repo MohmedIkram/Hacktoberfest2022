@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; 
+  }
+  
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  #display-box {
+    background: linear-gradient(135deg, #aad6ff, #f0a0e0, #99e0d5, #d8a0ff);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #display-box p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+    .search-bar {
+      margin-bottom: 20px;
+    }
+    
+    .city-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .city-list .city {
+      cursor: pointer;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .city-list .city:hover {
+      background-color: #f1f1f1;
+    }
+    
+    .weather-data {
+      background-color: #d8a0ff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    
+    #city {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    #temperature {
+      font-size: 48px;
+      margin-bottom: 10px;
+      
+    }
+    
+    #description {
+      font-size: 18px;
+    }
+   
+    
+    .search {
+      width: 60px;
+      height: 60px;
+      transform: 0.5s;
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+      border-radius: 60px;
+      box-shadow: 0 0 0 0 5px #7532d4;
+      margin: auto;
+    }
+    
+    .search.active {
+      width: 360px;
+    }
+    .search .input .search-button {
+      width: 80px;
+      height: 60px;
+      border: none;
+      outline: none;
+      background-color: #8338ec;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 0 60px 60px 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .search .icon {
+      align-items: center;
+      top: 0;
+      left: 0px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      z-index: 1000;
+      cursor: pointer;
+      position: absolute;
+      background: #fff;
+      border-radius: 60px;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .search .icon:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #8338ec;
+      transform: translate(-4px, -4px);
+    }
+    
+    .search .icon:after {
+      content: "";
+      width: 3px;
+      height: 12px;
+      position: absolute;
+      background: #8338ec;
+      transform: translate(6px, 6px) rotate(315deg);
+    }
+    
+    .search .input {
+      left: 60px;
+      width: 300px;
+      height: 60px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .search .input input {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      padding: 10px 0;
+      position: absolute;
+      text-align: center; 
+      left: 30%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+   
+    .clear {
+      top: 50%;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+      display: flex;
+      cursor: pointer;
+      background: #ff0;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
+    }
+    
+    .clear:before {
+      width: 1px;
+      height: 15px;
+      content: "";
+      position: absolute;
+      background: #999;
+      transform: rotate(45deg);
+    }
+    
+    .clear:after {
+      width: 1px;
+      height: 15px;
+      content: "";
+      position: absolute;
+      background: #999;
+      transform: rotate(315deg);
+    }
+    
