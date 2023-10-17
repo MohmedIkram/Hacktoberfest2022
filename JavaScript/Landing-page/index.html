@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Design</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');  
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(#39519f, #3939e7);
+            z-index: -999;
+        }
+        
+        img {
+            width: 100%;
+        }
+
+        nav {
+            position: absolute;
+            width: 100%;
+            z-index: 50;
+            left: 0;
+            top: 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 6rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            max-width: 250px;
+        }
+
+        .links ul {
+            display: flex;
+        }
+
+        .links a {
+            display: inline-block;
+            padding: 0.7rem 1.2rem;
+            margin-right: 0.6rem;
+            color: #ffffff;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: 1;
+            border-radius: 1.5rem;
+            transition: 0.3s all ease;
+        }
+
+        .links a:hover,
+        .links a:active {
+            color: #0b0235;
+            background-color: #fefefe;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 80rem;
+            padding: 0.2rem;
+            margin: 10px auto;
+        }
+
+        .hamburger-menu {
+            width: 2.7rem;
+            height: 3rem;
+            position: relative;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .hamburger-menu .bar {
+            position: relative;
+            width: 2.1rem;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+        }
+
+        .bar::before,
+        .bar::after {
+            position: absolute;
+            content: ' ';
+            width: 2.1rem;
+            height: 3px;
+            border-radius: 3px;
+            background-color: #fff;
+        }
+
+        .bar::before {
+            transform: translateY(-9px);
+        }
+
+        .bar::after {
+            transform: translateY(9px);
+        }
+
+        .hero {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .hero #base {
+            z-index: 6;
+        }
+
+        .hero #text {
+            position: absolute;
+            color: #fefefe;
+            font-size: clamp(3rem, 7.5vw, 8rem);
+            white-space: nowrap;
+            letter-spacing: 3px;
+            z-index: 5;
+            right: -850px;
+        }
+
+        #btn {
+            font-size: 18px;
+            position: absolute;
+            color: #fefefe;
+            text-decoration: none;
+            padding: 8px 30px;
+            display: inline-block;
+            border: 2px solid #fefefe;
+            border-radius: 25px;
+            z-index: 7;
+            letter-spacing: 0.51px;
+            transform: translateY(200px);
+            background: transparent;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+            background: #fefefe;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+        }
+
+        .left-content,
+        .right-content {
+            padding: 1.2rem;
+        }
+
+        h4 {
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: 0.31px;
+            text-align: justify;
+            font-size: 1.75rem;
+            color: #0b0235;
+        }
+
+        .heading {
+            color: #0b0235;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #0b0235;
+            font-size: 0.9rem;
+            padding-bottom: 2rem;
+            padding-right: 1rem;
+        }
+
+        footer {
+            background-color: #0b0235;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        footer img {
+            max-width: 400px;
+        }
+
+        @media (max-width: 992px){
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .links ul {
+                display: none;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+            }
+
+            .heading {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+            
+        }
+
+        @media (max-width: 768px){
+
+           .grid {
+            grid-template-columns: 1fr;
+           } 
+
+           .left-content,
+           .right-content {
+            padding: 0.4rem;
+           }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="./images/1.png" id="moon" data-speed="0.25" class="translateX" alt="">
+        <img src="./images/2.png" id="cloud" alt="" data-speed="0.35" class="translateY">
+        <img src="./images/3.png" id="mount"class="translateY" data-speed="0.15" alt="">
+        <h1 id="text"  class="translateX" data-speed="-3">Discover New Horizons</h1>
+        <a href="#" id="btn">Explore</a>
+        <img src="./images/4.png" id="base"  class="translateY" data-speed="0" alt="">
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container grid">
+            <div class="left-content">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</h4>
+            </div>
+            <div class="right-content">
+                <img src="./images/about-1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container grid">
+            <div class="left-content">
+                <h5 class="heading">Durable Fabric & Foam Inserts</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</p>
+            </div>
+            <div class="right-content">
+                <h5 class="heading">Double Opening</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</p>
+            </div>
+        </div>
+
+        <div class="container grid">
+            <div class="left-content">
+                <img src="./images/about-2.jpg" alt="">  
+            </div>
+            <div class="right-content">
+                <img src="./images/about-3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container grid">
+            <div class="left-content">
+                <h5 class="heading">Elasticated Side Pockets</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</p>
+            </div>
+            <div class="right-content">
+                <h5 class="heading">100% Enveloping and Flexible</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</p>
+            </div>
+        </div>
+
+        <div class="container grid">
+            <div class="left-content">
+                <img src="./images/about-4.jpg" alt="">
+            </div>
+            <div class="right-content">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sapiente sit vitae tempora nisi officiis iure voluptas vero debitis porro.</h4>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <a href="#">
+            <img src="./images/logo.png" alt="">
+        </a>
+    </footer>
+    <script>
+        const translateX = document.querySelectorAll(".translateX"),
+                 translateY = document.querySelectorAll(".translateY");
+
+                 window.addEventListener("scroll", () => {
+                    let scroll = window.pageYOffset;
+                    translateX.forEach(element => {
+                        let speed = element.dataset.speed;
+                        element.style.transform = `translateX(${speed * scroll}px)`;
+                    })
+                 })
+    </script>
+</body>
+
+</html>
