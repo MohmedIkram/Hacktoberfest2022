@@ -1,37 +1,41 @@
-//selection sort
-//TIME COMPLEXITY : O(n^2) (worst case)
-//SPACE COMPLEXITY : O(1)
-
 #include <bits/stdc++.h>
 using namespace std;
 
-int mini(int arr[], int i, int n) {
-    int min = i;
-    while (i < n) {
-        if (arr[i] < arr[min])
-            min = i;
-        i++;
+void selectionsort(int arr[],int n){
+    int min,temp;
+    for (int i = 0; i < n; i++)
+    {
+       min=i;
+       for (int j = i; j < n; j++)
+       {
+        if (arr[min]>arr[j])
+        {
+            min=j;
+        }
+        
+       }
+       temp=arr[i];
+       arr[i]=arr[min];
+       arr[min]=temp; 
     }
-    return min;
+    
+
 }
 
-void selectionsort(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        int min_index = mini(arr, i, n);
-        if (i != min_index)  swap(arr[i], arr[min_index]);
+void printarray(int arr[],int n){
+    for (int i = 0; i <n; i++)
+    {
+        cout<<arr[i]<<' ';
     }
-
+    cout<<endl;
 }
-int main() {
-    int n;
-    cin >> n;
-    int arr[n + 1];
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-    selectionsort(arr, n);
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
-    }
+
+
+
+int main(){
+    int arr[]={6,2,3,45,6,3,2,1};
+    printarray(arr,8);
+    selectionsort(arr,8);
+    printarray(arr,8);
     return 0;
 }

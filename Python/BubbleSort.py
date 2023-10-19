@@ -1,21 +1,33 @@
-def bubbleSort(arr):
-    n = len(arr)
-    
-    for i in range(n-1):
- 
-        # Last i elements 
-        for j in range(0, n-i-1):
- 
-            
-            # Swap if the element found is greater than the next element
-            if arr[j] > arr[j + 1] :
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
- 
-# test
-arr = [64, 34, 25, 12, 22, 11, 90]
- 
-bubbleSort(arr)
- 
-print ("Sorted array is:")
-for i in range(len(arr)):
-    print ("% d" % arr[i]),
+def bubbleSort(array): 
+
+ # loop to access each array element
+
+ for i in range(len(array)):
+
+ # loop to compare array elements
+
+  for j in range(0, len(array) - i - 1):
+
+   # compare two adjacent elements
+
+   # change > to < to sort in descending order
+
+  if array[j] > array[j + 1]:
+
+  # swapping elements if elements
+
+  # are not in the intended order
+
+        temp = array[j] 
+
+        array[j] = array[j+1]
+
+        array[j+1] = temp
+
+data = [-5, 72, 0, 33, -9]
+
+bubbleSort(data)
+
+print('Sorted Array in Ascending Order:') 
+
+print(data)

@@ -1,47 +1,44 @@
-#include <bits/stdc++.h> //header file that includes every standard library.
+#include<iostream>
 using namespace std;
-#define int long long
 
-int32_t main()
-{
-    int n; //number of elements
-    cin >> n;
 
-    int a[n]; //array of size n
-    for (int i = 0; i < n; i++)
-        cin >> a[i];
+int BinarySearch(int key, int n, int arry[]){
+    int strting=0;
+    int eding=n;
 
-    sort(a, a + n); // assuming the array is unsorted..
-
-    cout << "Enter an number to be searched!\n";
-    int search_element; //element to be searched
-    cin >> search_element;
-
-    int position = -1; //a variable to store the position of the element to be searched
-    int left = 0, right = n - 1;
-    int mid;
-    while (left <= right)
-    {
-        mid = left + (right - left) / 2;
-        if (a[mid] == search_element)
+    while (strting<=eding)
+    {   int mid= strting + (strting+eding)/2;
+        if (arry[mid]==key)
         {
-            position = mid;
-            break;
+            return mid;
+        }else if(arry[mid]>key){
+            eding=mid-1;
+        }else if(arry[mid]<key){
+            strting=mid+1;
         }
-        else if (a[mid] > search_element)
-            right = mid - 1;
-        else
-            left = mid + 1;
+        
     }
-    if (position == -1)
-        cout << "Element is not Found\n";
-    else
-        cout << "Element Found at position " << position + 1 << '\n';
+    return -1;
+
 }
 
-/* ##imp : Binary Search only works in sorted arrays
-    This is an efficient way for searching than Linear search */
-// Talking about its time complexity
-//Best Case - O(1)
-//Average Case - O(log n)
-//Worst Case - O(log n)
+
+int main(){
+
+    int n;
+    cin>>n;
+    int arry[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        cin>>arry[i];
+    }
+    cout<<"Enter The Key";
+    int key;
+    cin>>key;
+    cout<<BinarySearch(key,n,arry)<<endl;
+
+    return 0;
+
+    
+}
