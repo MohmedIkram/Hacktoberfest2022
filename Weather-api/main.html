@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Project</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <video id="video-background" autoplay muted loop>
+    <source src="clouds.webm" type="video/mp4">
+</video>
+
+<div id="display-box">
+    <h1 class="taggg">Weather Project</h1>
+ 
+    <section >
+      <div class="search">
+        
+        <div class="icon"></div>
+    
+        <div class="input">
+          <input type="text" placeholder="Search any city!" id="city-input">
+          <button  class="search-button" id="search-button"">Search</button>
+        </div>
+    
+        <span class="clear" onclick="document.getElementById('mysearch').value = ''">x</span>
+      </div>
+    </section>
+
+    <ul class="city-list">
+      <li class="city">London</li>
+      <li class="city">New York</li>
+      <li class="city">Tokyo</li>
+      <li class="city">Sydney</li>
+    </ul>
+    
+    <div class="weather-data" id="weather-data">
+      <h2 id="city"></h2>
+      <p id="temperature"></p>
+      <p id="maxtemp"></p>
+      <p id="mintemp"></p>
+      <p id="description"></p>
+      <p id="location"></p>    
+      <p id="Pressure"></p>
+      <p id="sunrise"></p>
+      <p id="sunset"></p>
+      <p id="wind"></p>
+    </div>
+    </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
